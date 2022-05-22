@@ -1,0 +1,21 @@
+.container {
+    border: 2px solid black;
+    margin-bottom: 5px;
+    position: relative;
+    width: 100%;
+    
+}
+.container:hover{
+    background-color: rgba(128, 128, 128, 0.384);
+}
+.buttonContainer {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    display: flex; 
+    transform: translateY(-50%);
+    button {   
+        transition: 1s;
+        margin-right: 15px;
+    }
+}
