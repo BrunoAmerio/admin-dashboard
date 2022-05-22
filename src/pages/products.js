@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import style from '../styles/Products.module.scss';
 
 const Products = () => {
