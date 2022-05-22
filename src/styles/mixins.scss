@@ -1,0 +1,17 @@
+@mixin buttonDefault($color) {
+	width: fit-content;
+	padding: 10px;
+	border: 2px solid $color;
+	border-radius: 8px;
+	background-color: transparent;
+	font-weight: bolder;
+	margin: auto;
+	cursor: pointer;
+	transition: 0.2s;
+
+	&:hover {
+		background-color: $color;
+		transition: 0.2s;
+		color: white;
+	}
+}

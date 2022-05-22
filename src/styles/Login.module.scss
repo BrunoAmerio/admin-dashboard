@@ -1,0 +1,25 @@
+@import './mixins';
+@import './colors';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	.formContainer {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		margin: auto;
+		margin-top: 50px;
+		gap: 15px;
+		padding: 20px 70px;
+		border: 2px solid palevioletred;
+		border-radius: 8px;
+		justify-content: center;
+	}
+
+	.button {
+		@include buttonDefault($lightblue);
+	}
+}
