@@ -17,8 +17,6 @@ const Sidebar = () => {
 	const [state, setState] = useState(false);
 	const avaible = router.pathname === '/';
 
-	console.log(avaible);
-
 	return (
 		<div className={!avaible ? style.container : style.disable}>
 			<button onClick={() => setState(!state)}>
