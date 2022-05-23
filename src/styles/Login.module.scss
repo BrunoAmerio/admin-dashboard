@@ -9,14 +9,42 @@
 	.formContainer {
 		display: flex;
 		flex-direction: column;
-		width: 30%;
+		width: 25%;
 		margin: auto;
 		margin-top: 50px;
-		gap: 15px;
-		padding: 20px 70px;
-		border: 2px solid palevioletred;
+		gap: 10px;
+		padding: 20px;
 		border-radius: 8px;
 		justify-content: center;
+		background-color: $lightblue;
+		height: 220px;
+
+		.inputContainer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			svg {
+				background-color: white;
+				border-radius: 8px;
+				height: 30px;
+				position: absolute;
+				left: 19px;
+			}
+
+			input {
+				height: 30px;
+				width: 80%;
+				padding: 0px 20px;
+				border: none;
+				border-radius: 8px;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
 	}
 
 	.button {
