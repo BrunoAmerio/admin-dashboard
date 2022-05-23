@@ -1,23 +1,23 @@
 import Head from 'next/head';
 import styles from '../styles/Login.module.scss';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import KeyIcon from '@mui/icons-material/Key';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
+import loginHook from '../redux/apiCalls/loginHook';
+
 const Home = () => {
-	const [user, setUser] = useState({});
-
-	console.log(user);
-
-	const handleChange = ({ target }) => {
-		setUser({
-			[target.name]: target.value,
-		});
-	};
+	const dispatch = useDispatch();
+	const loading = useSelector(state => state.user.loading);
+	console.log(loading);
 
 	const handleSubmit = event => {
 		event.preventDefault();
+		// Seleccionamos los input del documento
+		const email = document.querySelector('#email').value;
+		const password = document.querySelector('#password').value;
+		loginHook(dispatch, { email, password });
 	};
 
 	return (
@@ -34,7 +34,7 @@ const Home = () => {
 					<form className={styles.formContainer}>
 						<div className={styles.inputContainer}>
 							<AlternateEmailIcon sx={{ color: 'rgb(53, 139, 219)' }} />
-							<input placeholder='email' onChange={handleChange} name='email' />
+							<input placeholder='email' name='email' id='email' />
 						</div>
 
 						<div className={styles.inputContainer}>
@@ -42,8 +42,8 @@ const Home = () => {
 							<input
 								placeholder='contraseña'
 								type='password'
-								onChange={handleChange}
 								name='password'
+								id='password'
 							/>
 						</div>
 						<button className={styles.button} onClick={handleSubmit}>
