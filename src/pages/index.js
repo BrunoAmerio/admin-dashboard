@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Login.module.scss';
-
-import { TextField } from '@mui/material';
 import { useState } from 'react';
+
+import KeyIcon from '@mui/icons-material/Key';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const Home = () => {
 	const [user, setUser] = useState({});
@@ -29,20 +30,22 @@ const Home = () => {
 
 			<main className={styles.main}>
 				<div className={styles.container}>
-					<h1>Bienvenido Administrador</h1>
+					<h1>Bienvenido!</h1>
 					<form className={styles.formContainer}>
-						<TextField
-							label='email'
-							variant='outlined'
-							onChange={handleChange}
-							name='email'
-						/>
-						<TextField
-							label='contraseña'
-							type='password'
-							variant='outlined'
-							name='password'
-						/>
+						<div className={styles.inputContainer}>
+							<AlternateEmailIcon sx={{ color: 'rgb(53, 139, 219)' }} />
+							<input placeholder='email' onChange={handleChange} name='email' />
+						</div>
+
+						<div className={styles.inputContainer}>
+							<KeyIcon sx={{ color: 'rgb(53, 139, 219)' }} />
+							<input
+								placeholder='contraseña'
+								type='password'
+								onChange={handleChange}
+								name='password'
+							/>
+						</div>
 						<button className={styles.button} onClick={handleSubmit}>
 							Iniciar Sesion
 						</button>
