@@ -10,7 +10,6 @@ import loginHook from '../redux/apiCalls/loginHook';
 const Home = () => {
 	const dispatch = useDispatch();
 	const loading = useSelector(state => state.user.loading);
-	console.log(loading);
 
 	const handleSubmit = event => {
 		event.preventDefault();
