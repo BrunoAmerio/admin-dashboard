@@ -1,0 +1,54 @@
+.container {
+	width: 80%;
+	margin: auto;
+
+	h1 {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	.thisWeekContainer {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		h1 {
+			font-size: 22px;
+		}
+
+		.item {
+			background-color: palevioletred;
+			text-align: center;
+			width: 230px;
+			align-items: center;
+			border-radius: 10px;
+			padding: 30px;
+			color: white;
+
+			h2 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				font-size: 18px;
+				margin: 0;
+			}
+
+			h3 {
+				font-size: 25px;
+				margin: 0px;
+			}
+		}
+	}
+}
+
+.chartContainer {
+	margin-top: 80px;
+	.chart {
+		display: flex;
+		margin: auto;
+		justify-content: space-around;
+		width: 500px;
+	}
+}
