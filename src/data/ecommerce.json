@@ -1,0 +1,110 @@
+{
+	"visitors": {
+		"this_week": 50000,
+		"last_week": 1300,
+		"this_month": {
+			"name": "Mayo",
+			"year": "2022",
+			"weeks": [2400, 1500, 1300, 950],
+			"total": 9000
+		},
+		"historic_month": [
+			{
+				"name": "Enero",
+				"year": "2022",
+				"weeks": [700, 234, 2344, 233],
+				"total": 12378
+			},
+			{
+				"name": "Febrero",
+				"year": "2022",
+				"weeks": [3444, 234, 333, 2344],
+				"total": 13733
+			},
+			{
+				"name": "Marzo",
+				"year": "2022",
+				"weeks": [435, 456, 6788, 1323],
+				"total": 78487
+			},
+			{
+				"name": "Abril",
+				"year": "2022",
+				"weeks": [1345, 2345, 3345, 2344],
+				"total": 98398
+			}
+		]
+	},
+	"sales": {
+		"this_week": 71837,
+		"last_week": 500,
+		"this_month": {
+			"name": "Mayo",
+			"year": "2022",
+			"weeks": [1000, 111, 500, 100],
+			"total": 10000
+		},
+		"historic_month": [
+			{
+				"name": "Enero",
+				"year": "2022",
+				"weeks": [600, 2334, 3456, 467],
+				"total": 1233
+			},
+			{
+				"name": "Febrero",
+				"year": "2022",
+				"weeks": [2822, 2724, 2622, 3456],
+				"total": 34564
+			},
+			{
+				"name": "Marzo",
+				"year": "2022",
+				"weeks": [2762, 456, 7892, 1325],
+				"total": 24554
+			},
+			{
+				"name": "Abril",
+				"year": "2022",
+				"weeks": [2762, 2345, 7137, 7283],
+				"total": 24566
+			}
+		]
+	},
+	"money_collection": {
+		"this_week": 78918,
+		"last_week": 500,
+		"this_month": {
+			"name": "Mayo",
+			"year": "2022",
+			"weeks": [1433, 1461, 700, 1000],
+			"total": 23544
+		},
+		"historic_month": [
+			{
+				"name": "Enero",
+				"year": "2022",
+				"weeks": [2620, 2664, 7235, 253],
+				"total": 23424
+			},
+			{
+				"name": "Febrero",
+				"year": "2022",
+				"weeks": [326, 2564, 2343, 4576],
+				"total": 45664
+			},
+			{
+				"name": "Marzo",
+				"year": "2022",
+				"weeks": [3573, 4766, 3568, 3767],
+				"total": 54674
+			},
+			{
+				"name": "Abril",
+				"year": "2022",
+				"weeks": [3455, 6475, 356, 2334],
+				"total": 456678
+			}
+		]
+	}
+}
