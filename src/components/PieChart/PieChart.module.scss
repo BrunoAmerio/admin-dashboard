@@ -1,21 +1,53 @@
+@import '../../styles/colors.scss';
+
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 10px;
 	background-color: white;
-	padding: 15px 5px;
+	padding: 15px 30px;
 	border-radius: 8px;
+	gap: 20px;
+
+	.donutContainer {
+		width: 25vh;
+	}
 
 	h1 {
-		font-size: 20px;
-	}
-	h2 {
-		font-size: 18px;
+		font-size: 15px;
 	}
 
 	h1,
 	h2 {
 		margin: 0;
+		color: $lightblack;
+	}
+
+	.indexContainer {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 4px;
+
+		.item {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			width: 100%;
+			font-size: 13px;
+
+			span {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1500px) {
+	.donutContainer {
+		width: 20vh !important;
 	}
 }
