@@ -33,19 +33,19 @@ const LineChart = ({ data, label, annual }) => {
 			},
 		},
 	};
-	console.log(data);
+
 	const props = {
 		datasets: [
 			{
 				label,
-				data: data.weeks,
+				data: data.weeks || [],
 				tension: 0.2,
 				borderColor: '#11b7e0af',
 				backgroundColor: ['#ff6385ad', '#36a2ebad', '#ffcd56ad', '#13ca028f'],
 				pointRadius: 6,
 			},
 		],
-		labels: ['Sem1', 'Sem2', 'Sem3', 'Sem4'],
+		labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
 	};
 
 	useEffect(() => {

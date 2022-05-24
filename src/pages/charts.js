@@ -43,16 +43,54 @@ const Charts = () => {
 				</div>
 			</div>
 
-			<div className={style.mainChartContainer}>
-				<div className={style.mainChart}>
-					<LineChart
-						data={chart.visitors.this_month}
-						label='Visitas este mes'
-					/>
-				</div>
+			<div className={style.chartContainer}>
+				{/* VISITS */}
+				<div className={style.chartsContainer}>
+					<div className={style.barChart}>
+						<LineChart
+							data={chart.visitors.this_month}
+							label='Visitas este mes'
+						/>
+					</div>
 
-				<div className={style.mainDonuts}>
-					<PieChart data={chart.visitors.this_month} label='Visitantes' />
+					<div className={style.donutsChart}>
+						<PieChart
+							data={chart.visitors.historic_month}
+							label='Visitantes'
+							annual={true}
+						/>
+					</div>
+				</div>
+				{/* COLLECTION */}
+				<div className={style.chartsContainer}>
+					<div className={style.barChart}>
+						<LineChart
+							data={chart.money_collection.this_month}
+							label='Recaudacion este mes'
+						/>
+					</div>
+
+					<div className={style.donutsChart}>
+						<PieChart
+							data={chart.money_collection.historic_month}
+							label='Recaudaciones'
+							annual={true}
+						/>
+					</div>
+				</div>
+				{/* SALES */}
+				<div className={style.chartsContainer}>
+					<div className={style.barChart}>
+						<LineChart data={chart.sales.this_month} label='Ventas este mes' />
+					</div>
+
+					<div className={style.donutsChart}>
+						<PieChart
+							data={chart.sales.historic_month}
+							label='Ventas'
+							annual={true}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

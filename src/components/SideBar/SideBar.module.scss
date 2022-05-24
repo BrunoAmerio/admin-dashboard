@@ -2,11 +2,22 @@
 	button {
 		position: absolute;
 		top: 0;
-		left: 20px;
+		left: 2.5vh;
 		border: none;
 		background-color: transparent;
-		padding: 10px;
 		cursor: pointer;
+	}
+}
+
+.profile {
+	text-align: center;
+	padding: 10px;
+
+	h2 {
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
 	}
 }
 
@@ -14,7 +25,7 @@
 	display: flex;
 	align-items: center;
 	gap: 15px;
-	padding: 0px 12px;
+	padding: 5px 12px;
 	font-size: 10px;
 	font-family: 'Poppins-Regular';
 
@@ -25,4 +36,12 @@
 
 .disable {
 	display: none;
+}
+
+@media (min-width: 1500px) {
+	.container {
+		button {
+			left: 7vh;
+		}
+	}
 }

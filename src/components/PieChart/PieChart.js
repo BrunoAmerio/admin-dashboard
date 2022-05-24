@@ -12,6 +12,7 @@ import {
 	Legend,
 	Filler,
 } from 'chart.js';
+import { useEffect } from 'react';
 
 ChartJS.register(
 	CategoryScale,
@@ -24,7 +25,7 @@ ChartJS.register(
 	Filler
 );
 
-const PieChart = ({ data, label }) => {
+const PieChart = ({ data, label, annual }) => {
 	const options = {
 		responsive: true,
 		width: 1000,
@@ -45,7 +46,7 @@ const PieChart = ({ data, label }) => {
 		datasets: [
 			{
 				label,
-				data: data.weeks,
+				data: data.weeks || [],
 				tension: 0.2,
 				backgroundColor: [
 					'rgb(255, 99, 132)',
@@ -56,23 +57,39 @@ const PieChart = ({ data, label }) => {
 				pointRadius: 6,
 			},
 		],
-		labels: ['Sem1', 'Sem2', 'Sem3', 'Sem4'],
+		labels: data.map(month => month.name),
 	};
+
+	useEffect(() => {
+		const score = [];
+		if (annual) {
+			data.forEach(month => {
+				score.push(month.total);
+			});
+			props.datasets[0].data = score;
+		}
+	}, []);
 
 	return (
 		<div className={style.container}>
 			<h1>{label}</h1>
-			<Doughnut data={props} options={options} height={1000} width={1000} />
-			{props.labels.map((item, index) => {
-				return (
-					<div key={item}>
-						<h2>
-							{' '}
-							{item}: {data.weeks[index]}{' '}
+			<div className={style.donutContainer}>
+				<Doughnut data={props} options={options} height={1000} width={1000} />
+			</div>
+			<div className={style.indexContainer}>
+				{data.map((item, index) => {
+					return (
+						<h2 key={item.name} className={style.item}>
+							<span
+								style={{
+									backgroundColor: `${props.datasets[0].backgroundColor[index]}`,
+								}}
+							/>
+							{item.name}: {item.total}{' '}
 						</h2>
-					</div>
-				);
-			})}
+					);
+				})}
+			</div>
 		</div>
 	);
 };

@@ -1,22 +1,25 @@
+@import '../styles/colors.scss';
+
 .container {
 	height: 100%;
 	width: 90%;
 	margin: auto;
-	background-color: rgb(226, 225, 225);
+	background-color: #e2e1e1;
 	padding: 1px 25px;
 
 	h1 {
 		display: flex;
 		align-items: center;
 		gap: 5px;
+		color: $black;
 	}
 
 	.thisWeekContainer {
 		display: flex;
-		width: 90%;
+		width: 100%;
 		margin: auto;
 		padding: 10px 5px;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		align-items: center;
 
 		.color1 {
@@ -59,18 +62,25 @@
 	}
 }
 
-.mainChartContainer {
+.chartsContainer {
 	display: flex;
 	margin-top: 40px;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-around;
-	.mainChart {
+	.barChart {
 		width: 70%;
 		background-color: white;
 		border-radius: 8px;
-		padding: 5px;
+		padding: 40px;
 	}
-	.mainDonuts {
-		width: 20%;
+	.donutsChart {
+		width: 25%;
+	}
+}
+
+@media (min-width: 1500px) {
+	.container {
+		padding: 10px 70px;
+		width: 80%;
 	}
 }
