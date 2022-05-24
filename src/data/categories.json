@@ -1,0 +1,242 @@
+[
+	{
+		"id": 0,
+		"name": "",
+		"discount": 0.0,
+		"disable": false,
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+	},
+	{
+		"id": 0,
+		"name": "",
+		"discount": 0.0,
+		"disable": false,
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+	},
+	{
+		"id": 0,
+		"name": "",
+		"discount": 0.0,
+		"disable": false,
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+	},
+	{
+		"id": 0,
+		"name": "",
+		"discount": 0.0,
+		"disable": false,
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+	},
+	{
+		"id": 0,
+		"name": "",
+		"discount": 0.0,
+		"disable": false,
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+	},
+	{
+		"id": 0,
+		"name": "",
+		"discount": 0.0,
+		"disable": false,
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": [0, 0, 0, 0],
+				"total": 0
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+	}
+]
