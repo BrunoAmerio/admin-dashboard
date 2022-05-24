@@ -1,0 +1,27 @@
+.container {
+	button {
+		position: absolute;
+		top: 0;
+		border: none;
+		background-color: transparent;
+		padding: 10px;
+		cursor: pointer;
+	}
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 0px 12px;
+	font-size: 10px;
+	font-family: 'Poppins-Regular';
+
+	&:hover {
+		background-color: rgb(223, 221, 221);
+	}
+}
+
+.disable {
+	display: none;
+}

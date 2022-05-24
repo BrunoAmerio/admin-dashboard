@@ -1,0 +1,53 @@
+@import './mixins';
+@import './colors';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	.formContainer {
+		display: flex;
+		flex-direction: column;
+		width: 25%;
+		margin: auto;
+		margin-top: 50px;
+		gap: 10px;
+		padding: 20px;
+		border-radius: 8px;
+		justify-content: center;
+		background-color: $lightblue;
+		height: 220px;
+
+		.inputContainer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			svg {
+				background-color: white;
+				border-radius: 8px;
+				height: 30px;
+				position: absolute;
+				left: 19px;
+			}
+
+			input {
+				height: 30px;
+				width: 80%;
+				padding: 0px 20px;
+				border: none;
+				border-radius: 8px;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+
+	.button {
+		@include buttonDefault($lightblue);
+	}
+}
