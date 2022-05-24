@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 import {
 	Chart as ChartJS,
 	CategoryScale,
 	LinearScale,
 	PointElement,
-	LineElement,
+	BarElement,
 	Title,
 	Tooltip,
 	Legend,
@@ -17,7 +17,7 @@ ChartJS.register(
 	CategoryScale,
 	LinearScale,
 	PointElement,
-	LineElement,
+	BarElement,
 	Title,
 	Tooltip,
 	Legend,
@@ -33,14 +33,15 @@ const LineChart = ({ data, label, annual }) => {
 			},
 		},
 	};
-
+	console.log(data);
 	const props = {
 		datasets: [
 			{
 				label,
 				data: data.weeks,
 				tension: 0.2,
-				borderColor: 'rgb(17, 183, 224)',
+				borderColor: '#11b7e0af',
+				backgroundColor: ['#ff6385ad', '#36a2ebad', '#ffcd56ad', '#13ca028f'],
 				pointRadius: 6,
 			},
 		],
@@ -60,7 +61,7 @@ const LineChart = ({ data, label, annual }) => {
 		}
 	}, []);
 
-	return <Line data={props} options={options} />;
+	return <Bar data={props} options={options} />;
 };
 
 export default LineChart;

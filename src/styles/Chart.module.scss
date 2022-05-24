@@ -1,6 +1,9 @@
 .container {
-	width: 80%;
+	height: 100%;
+	width: 90%;
 	margin: auto;
+	background-color: rgb(226, 225, 225);
+	padding: 1px 25px;
 
 	h1 {
 		display: flex;
@@ -10,18 +13,31 @@
 
 	.thisWeekContainer {
 		display: flex;
+		width: 90%;
+		margin: auto;
+		padding: 10px 5px;
 		justify-content: space-around;
 		align-items: center;
 
-		h1 {
-			font-size: 22px;
+		.color1 {
+			background: linear-gradient(to right, #f77a13de, #f7bc34c2);
+		}
+
+		.color2 {
+			background: linear-gradient(to right, #36a3ebce, #7913ffb9);
+		}
+
+		.color3 {
+			background: linear-gradient(to right, #12c902cb, #48ee88ee);
 		}
 
 		.item {
-			background-color: palevioletred;
+			display: flex;
+			flex-direction: column;
+			width: 330px;
+			height: 200px;
 			text-align: center;
-			width: 230px;
-			align-items: center;
+			justify-content: space-around;
 			border-radius: 10px;
 			padding: 30px;
 			color: white;
@@ -30,7 +46,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				gap: 10px;
+				gap: 15px;
 				font-size: 18px;
 				margin: 0;
 			}
@@ -43,12 +59,18 @@
 	}
 }
 
-.chartContainer {
-	margin-top: 80px;
-	.chart {
-		display: flex;
-		margin: auto;
-		justify-content: space-around;
-		width: 500px;
+.mainChartContainer {
+	display: flex;
+	margin-top: 40px;
+	align-items: center;
+	justify-content: space-around;
+	.mainChart {
+		width: 70%;
+		background-color: white;
+		border-radius: 8px;
+		padding: 5px;
+	}
+	.mainDonuts {
+		width: 20%;
 	}
 }
