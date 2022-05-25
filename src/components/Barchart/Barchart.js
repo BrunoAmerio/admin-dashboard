@@ -24,7 +24,7 @@ ChartJS.register(
 	Filler
 );
 
-const LineChart = ({ data, label, annual }) => {
+const Barchart = ({ data, label, annual }) => {
 	const options = {
 		responsive: true,
 		scales: {
@@ -64,4 +64,4 @@ const LineChart = ({ data, label, annual }) => {
 	return <Bar data={props} options={options} />;
 };
 
-export default LineChart;
+export default Barchart;

@@ -7,10 +7,10 @@
 	background-color: white;
 	padding: 15px 30px;
 	border-radius: 8px;
-	gap: 20px;
 
 	.donutContainer {
 		width: 30vh;
+		margin-top: 20px;
 	}
 
 	h1 {
@@ -46,7 +46,19 @@
 	}
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 360px) {
+	.donutContainer {
+		width: 15vh !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.donutContainer {
+		width: 15vh !important;
+	}
+}
+
+@media (min-width: 1280px) {
 	.donutContainer {
 		width: 20vh !important;
 	}

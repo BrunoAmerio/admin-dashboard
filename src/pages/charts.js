@@ -7,7 +7,7 @@ import ShowChartIcon from '@mui/icons-material/ShowChart';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 
-import LineChart from '../components/LineChart/LineChart';
+import BarChart from '../components/BarChart/BarChart';
 import PieChart from '../components/PieChart/PieChart';
 
 const Charts = () => {
@@ -47,7 +47,7 @@ const Charts = () => {
 				{/* VISITS */}
 				<div className={style.chartsContainer}>
 					<div className={style.barChart}>
-						<LineChart
+						<BarChart
 							data={chart.visitors.this_month}
 							label='Visitas este mes'
 						/>
@@ -64,7 +64,7 @@ const Charts = () => {
 				{/* COLLECTION */}
 				<div className={style.chartsContainer}>
 					<div className={style.barChart}>
-						<LineChart
+						<BarChart
 							data={chart.money_collection.this_month}
 							label='Recaudacion este mes'
 						/>
@@ -81,7 +81,7 @@ const Charts = () => {
 				{/* SALES */}
 				<div className={style.chartsContainer}>
 					<div className={style.barChart}>
-						<LineChart data={chart.sales.this_month} label='Ventas este mes' />
+						<BarChart data={chart.sales.this_month} label='Ventas este mes' />
 					</div>
 
 					<div className={style.donutsChart}>
