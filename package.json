@@ -1,40 +1,40 @@
 {
-  "name": "admin-dashboard",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.8.0",
-    "@mui/material": "^5.8.0",
-    "@reduxjs/toolkit": "^1.8.1",
-    "axios": "^0.27.2",
-    "chart.js": "^3.7.1",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-chartjs-2": "^4.1.0",
-    "react-dom": "18.1.0",
-    "react-dropzone": "^14.2.1",
-    "react-redux": "^8.0.1",
-    "react-toastify": "^9.0.1",
-    "redux-persist": "^6.0.0",
-    "sass": "^1.52.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.16.0",
-    "eslint-config-next": "12.1.6",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.30.0",
-    "prettier": "^2.6.2"
-  }
+	"name": "admin-dashboard",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.8.1",
+		"@mui/icons-material": "^5.8.0",
+		"@mui/material": "^5.8.0",
+		"@reduxjs/toolkit": "^1.8.1",
+		"axios": "^0.27.2",
+		"chart.js": "^3.7.1",
+		"next": "12.1.6",
+		"react": "18.1.0",
+		"react-chartjs-2": "^4.1.0",
+		"react-dom": "18.1.0",
+		"react-dropzone": "^14.2.1",
+		"react-redux": "^8.0.1",
+		"react-toastify": "^9.0.1",
+		"redux-persist": "^6.0.0",
+		"sass": "^1.52.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.16.0",
+		"eslint-config-next": "12.1.6",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-n": "^15.2.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-react": "^7.30.0",
+		"prettier": "^2.6.2"
+	}
 }

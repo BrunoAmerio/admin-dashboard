@@ -8,7 +8,7 @@ import Sidebar from '../components/SideBar/SideBar';
 function MyApp({ Component, pageProps }) {
 	return (
 		<Provider store={store}>
-			<div>
+			<div className='container'>
 				<Sidebar />
 				<Component {...pageProps} />
 			</div>
