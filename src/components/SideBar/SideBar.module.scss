@@ -1,25 +1,29 @@
-.profile {
-	text-align: center;
-	padding: 10px;
+.container {
+	width: 14%;
 
-	h2 {
-		font-size: 1px;
+	.profile {
+		text-align: center;
+		padding: 10px;
+
+		h2 {
+			font-size: 18px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+	}
+
+	.item {
 		display: flex;
 		align-items: center;
-		gap: 20px;
-	}
-}
+		gap: 15px;
+		padding: 5px 20px;
+		font-size: 10px;
+		font-family: 'Poppins-Regular';
 
-.item {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	padding: 5px 12px;
-	font-size: 10px;
-	font-family: 'Poppins-Regular';
-
-	&:hover {
-		background-color: rgb(223, 221, 221);
+		&:hover {
+			background-color: rgb(223, 221, 221);
+		}
 	}
 }
 
@@ -28,9 +32,4 @@
 }
 
 @media (min-width: 1500px) {
-	.container {
-		button {
-			left: 7vh;
-		}
-	}
 }
