@@ -1,0 +1,27 @@
+.dataContainer{
+    .titleContainer {
+        background-color: blueviolet;
+        color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-top: 10px;
+        .options {
+            display: flex;
+            margin-left: 30px;
+            margin-right: 30px;
+            justify-content: space-around;
+            align-items: center;
+            h2 {
+                margin: 0;
+            }
+            .addBtn {
+                display: flex;
+                align-items: center;
+                color: white;
+                border:  none;
+                border-radius: 4px;
+                background-color: rgb(100, 26, 170);
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+[
+    {
+        "id": 10001,
+        "name": "PC",
+        "discount":19,
+        "image":"url1",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+    },
+    {
+        "id": 10002,
+        "name": "Cámaras",
+        "discount":19,
+        "image":"url2",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+    },
+    {
+        "id": 10003,
+        "name": "Celulares",
+        "discount":19,
+        "image":"url3",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+    },
+    {
+        "id": 10004,
+        "name": "Televisores",
+        "discount":19,
+        "image":"url4",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+    }
+]
