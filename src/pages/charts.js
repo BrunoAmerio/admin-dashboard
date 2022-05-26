@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import MainCharstContainer from '../components/MainChartsContainer/MainChartsContainer';
 import style from '../styles/Chart.module.scss';
 
@@ -10,11 +12,41 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
-import MainChartsContainer from '../components/MainChartsContainer/MainChartsContainer';
+import PieChart from '../components/PieChart/PieChart';
 
 const Charts = () => {
+	const [salesCategories, setSalesCategories] = useState([]);
+	const [viewsCategories, setViewsCategories] = useState([]);
+
+	useEffect(() => {
+		const tempSalesCategories = [];
+		const tempViewsCategories = [];
+		categoriesData.forEach(category => {
+			tempSalesCategories.push({
+				name: category.name,
+				total: category.sales.this_month.total,
+			});
+
+			tempViewsCategories.push({
+				name: category.name,
+				total: category.views.this_month.total,
+			});
+		});
+
+		setSalesCategories(tempSalesCategories);
+		setViewsCategories(tempViewsCategories);
+	}, []);
+
+	console.log(salesCategories);
+
 	return (
 		<div className={style.container}>
+			<Head>
+				<title>Graficos - Admin Dashboard</title>
+				<meta name='description' content='Admin Dashboard Charts Page' />
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
+
 			<h1>
 				<BarChartIcon fontSize='large' /> Graficos
 			</h1>
@@ -45,8 +77,8 @@ const Charts = () => {
 				</div>
 			</div>
 
-			<div className={style.chartContainer}>
-				{/* VISITS */}
+			<div className={style.slideChartContainer}>
+				{/* Visitas */}
 				<MainCharstContainer
 					barChart={{
 						data: ecommerceData.visitors.this_month,
@@ -70,7 +102,7 @@ const Charts = () => {
 					}}
 				/>
 
-				{/* Recaudacion  */}
+				{/* Recaudación  */}
 				<MainCharstContainer
 					barChart={{
 						data: ecommerceData.money_collection.this_month,
@@ -83,14 +115,15 @@ const Charts = () => {
 				/>
 			</div>
 
-			<div className={style.chartContainer}>
+			{/* Mapeo sobre todas las categorias para representar sus datos en gráficos */}
+			<div className={style.slideChartContainer}>
 				{categoriesData.map(category => {
 					return (
 						<MainCharstContainer
 							key={category.id}
 							barChart={{
-								data: category.sales.this_month,
-								label: 'Ventas este mes ',
+								data: category.views.this_month,
+								label: `Visitas en: ${category.name} este mes `,
 							}}
 							pieChart={{
 								data: category.sales.historic_month,
@@ -99,6 +132,16 @@ const Charts = () => {
 						/>
 					);
 				})}
+			</div>
+
+			<div className={style.pieContainer}>
+				{salesCategories ? (
+					<PieChart data={salesCategories} label='Ventas este mes' />
+				) : null}
+
+				{viewsCategories ? (
+					<PieChart data={viewsCategories} label='Visitas este mes' />
+				) : null}
 			</div>
 		</div>
 	);

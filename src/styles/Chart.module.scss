@@ -18,7 +18,6 @@
 		display: flex;
 		width: 100%;
 		margin: auto;
-		padding: 10px 5px;
 		justify-content: space-evenly;
 		align-items: center;
 
@@ -58,24 +57,29 @@
 			}
 		}
 	}
-}
 
-.chartContainer {
-	display: flex;
-	overflow: scroll;
-	height: 470px;
-	width: 70%;
-	padding: 15px 0px;
-	margin: auto;
-	overflow-y: hidden;
-	scroll-snap-type: x mandatory;
+	.slideChartContainer {
+		display: flex;
+		overflow: scroll;
+		padding: 10px 0px;
+		gap: 400px;
+		margin: auto;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+	}
+
+	.pieContainer {
+		display: flex;
+		gap: 50px;
+		width: fit-content;
+		margin: auto;
+		margin-top: 50px;
+	}
 }
 
 @media (min-width: 1800px) {
-	.chartContainer {
+	.slideChartContainer {
 		width: 63% !important;
-		gap: 400px !important;
-		margin: auto !important;
 	}
 	.thisWeekContainer {
 		padding: 15px 50px !important;
@@ -87,21 +91,22 @@
 	}
 }
 
-@media (min-width: 1200px) {
-	.chartContainer {
-		width: 85%;
-		gap: 400px;
-		margin: auto;
-	}
-	.thisWeekContainer {
-		padding: 15px 50px !important;
-		.item {
-			padding: 73px 30px;
-			width: 36vh;
-			height: 24vh;
-		}
+@media (min-width: 1400px) {
+	.slideChartContainer {
+		width: 80%;
 	}
 }
 
-@media (min-width: 360px) {
+@media (min-width: 1200px) {
+	.slideChartContainer {
+		width: 85%;
+	}
+	.thisWeekContainer {
+		padding: 15px 50px;
+		.item {
+			padding: 73px 30px;
+			width: 36vh;
+			height: 22vh;
+		}
+	}
 }
