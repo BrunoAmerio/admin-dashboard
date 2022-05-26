@@ -1,6 +1,6 @@
+import { useEffect } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import style from './PieChart.module.scss';
-
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -12,7 +12,6 @@ import {
 	Legend,
 	Filler,
 } from 'chart.js';
-import { useEffect } from 'react';
 
 ChartJS.register(
 	CategoryScale,
@@ -48,6 +47,7 @@ const PieChart = ({ data, label, annual }) => {
 				label,
 				data: data.weeks || [],
 				tension: 0.2,
+				// SE LE DEBEN ASIGNAR MÁS COLORES HASTA LLEGAR A UN TOTAL DE 12
 				backgroundColor: [
 					'rgb(255, 99, 132)',
 					'rgb(54, 162, 235)',
@@ -61,8 +61,8 @@ const PieChart = ({ data, label, annual }) => {
 	};
 
 	useEffect(() => {
-		const score = [];
 		if (annual) {
+			const score = [];
 			data.forEach(month => {
 				score.push(month.total);
 			});

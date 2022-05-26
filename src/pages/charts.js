@@ -1,14 +1,16 @@
+import MainCharstContainer from '../components/MainChartsContainer/MainChartsContainer';
 import style from '../styles/Chart.module.scss';
-import chart from '../data/ecommerce.json';
+
+// DATA
+import ecommerceData from '../data/ecommerce.json';
+import categoriesData from '../data/categories.json';
 
 // Icons
 import BarChartIcon from '@mui/icons-material/BarChart';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
-
-import BarChart from '../components/BarChart/BarChart';
-import PieChart from '../components/PieChart/PieChart';
+import MainChartsContainer from '../components/MainChartsContainer/MainChartsContainer';
 
 const Charts = () => {
 	return (
@@ -22,7 +24,7 @@ const Charts = () => {
 					<h2>
 						Ventas <TurnedInNotIcon />
 					</h2>
-					<h3>{chart.sales.this_week}</h3>
+					<h3>{ecommerceData.sales.this_week}</h3>
 					<p>Esta semana</p>
 				</div>
 
@@ -30,7 +32,7 @@ const Charts = () => {
 					<h2>
 						Recaudaciones <ShowChartIcon />{' '}
 					</h2>
-					<h3>$ {chart.money_collection.this_week}</h3>
+					<h3>$ {ecommerceData.money_collection.this_week}</h3>
 					<p>Esta semana</p>
 				</div>
 
@@ -38,60 +40,65 @@ const Charts = () => {
 					<h2>
 						Visitas <VisibilityIcon />{' '}
 					</h2>
-					<h3>{chart.visitors.this_week}</h3>
+					<h3>{ecommerceData.visitors.this_week}</h3>
 					<p>Esta semana</p>
 				</div>
 			</div>
 
 			<div className={style.chartContainer}>
 				{/* VISITS */}
-				<div className={style.chartsContainer}>
-					<div className={style.barChart}>
-						<BarChart
-							data={chart.visitors.this_month}
-							label='Visitas este mes'
-						/>
-					</div>
+				<MainCharstContainer
+					barChart={{
+						data: ecommerceData.visitors.this_month,
+						label: 'Visitas este mes',
+					}}
+					pieChart={{
+						data: ecommerceData.visitors.historic_month,
+						label: 'Visitantes',
+					}}
+				/>
 
-					<div className={style.donutsChart}>
-						<PieChart
-							data={chart.visitors.historic_month}
-							label='Visitantes'
-							annual={true}
-						/>
-					</div>
-				</div>
-				{/* COLLECTION */}
-				<div className={style.chartsContainer}>
-					<div className={style.barChart}>
-						<BarChart
-							data={chart.money_collection.this_month}
-							label='Recaudacion este mes'
-						/>
-					</div>
+				{/* Ventas  */}
+				<MainCharstContainer
+					barChart={{
+						data: ecommerceData.sales.this_month,
+						label: 'Ventas este mes',
+					}}
+					pieChart={{
+						data: ecommerceData.sales.historic_month,
+						label: 'Ventas',
+					}}
+				/>
 
-					<div className={style.donutsChart}>
-						<PieChart
-							data={chart.money_collection.historic_month}
-							label='Recaudaciones'
-							annual={true}
-						/>
-					</div>
-				</div>
-				{/* SALES */}
-				<div className={style.chartsContainer}>
-					<div className={style.barChart}>
-						<BarChart data={chart.sales.this_month} label='Ventas este mes' />
-					</div>
+				{/* Recaudacion  */}
+				<MainCharstContainer
+					barChart={{
+						data: ecommerceData.money_collection.this_month,
+						label: 'Recaudacion este mes',
+					}}
+					pieChart={{
+						data: ecommerceData.money_collection.historic_month,
+						label: 'Recaudacion',
+					}}
+				/>
+			</div>
 
-					<div className={style.donutsChart}>
-						<PieChart
-							data={chart.sales.historic_month}
-							label='Ventas'
-							annual={true}
+			<div className={style.chartContainer}>
+				{categoriesData.map(category => {
+					return (
+						<MainCharstContainer
+							key={category.id}
+							barChart={{
+								data: category.sales.this_month,
+								label: 'Ventas este mes ',
+							}}
+							pieChart={{
+								data: category.sales.historic_month,
+								label: 'Ventas',
+							}}
 						/>
-					</div>
-				</div>
+					);
+				})}
 			</div>
 		</div>
 	);
