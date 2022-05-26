@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 10% 40% 25% 20%;
     gap: 10px;
-    .productImg {
+    .dataImg {
         img{
             border-radius: 5px;
         }
@@ -22,7 +22,7 @@
     .informationTitle{
         opacity: 0;
     }
-    .productImg{
+    .dataImg{
         opacity: 0;
     }
     .option{

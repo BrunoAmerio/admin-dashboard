@@ -1,294 +1,154 @@
 [
-	{
-		"id": 0,
-		"name": "Electrodomesticos",
-		"discount": 0.0,
-		"disable": false,
-		"views": {
-			"this_week": 350,
-			"last_week": 500,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [1500, 135, 500, 350],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{ "name": "Enero", "year": 2022, "values": [123, 344, 564, 456] },
-					{ "name": "Febrero", "year": 2022, "values": [456, 345, 237, 458] },
-					{ "name": "Marzo", "year": 2022, "values": [123, 453, 673, 746] }
-				]
-			}
-		},
-		"sales": {
-			"this_week": 156,
-			"last_week": 745,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [236, 256, 246, 235],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{ "name": "Enero", "year": 2022, "values": [124, 356, 723, 347] },
-					{ "name": "Febrero", "year": 2022, "values": [367, 238, 3573, 363] },
-					{ "name": "Marzo", "year": 2022, "values": [246, 226, 486, 226] }
-				]
-			}
-		}
-	},
-	{
-		"id": 0,
-		"name": "Calzado",
-		"discount": 0.0,
-		"disable": false,
-		"views": {
-			"this_week": 6222,
-			"last_week": 2462,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [2462, 2462, 366, 3567],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{ "name": "Enero", "year": 2022, "values": [1324, 2546, 4737, 1357] },
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [4864, 6568, 3643, 3456]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [4687, 4576, 4498, 40756] }
-				]
-			}
-		},
-		"sales": {
-			"this_week": 24667,
-			"last_week": 23462,
+    {
+        "id": 10001,
+        "name": "PC",
+        "discount":19,
+        "image":"url1",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
 			"this_month": {
 				"name": "",
 				"year": 2022,
-				"values": [2467, 2773, 5788, 7555],
-				"total": 0
+				"values": "0*-*0*-*0*-*0"
 			},
 			"historic_month": {
 				"values": [
-					{ "name": "Enero", "year": 2022, "values": [1324, 2546, 4737, 1357] },
-					{ "name": "Febrero", "year": 2022, "values": [2456, 356, 356, 356] },
-					{ "name": "Marzo", "year": 2022, "values": [2746, 2266, 4856, 2236] }
-				]
-			}
-		}
-	},
-	{
-		"id": 0,
-		"name": "Indumentaria",
-		"discount": 0.0,
-		"disable": false,
-		"views": {
-			"this_week": 13465,
-			"last_week": 24642,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [24624, 2462, 2462, 24624],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{
-						"name": "Enero",
-						"year": 2022,
-						"values": [1341, 1314, 13341, 3456]
-					},
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [5748, 9586, 5789, 5798]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [6253, 9272, 9292, 3457] }
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
 				]
 			}
 		},
-		"sales": {
-			"this_week": 34567,
-			"last_week": 6794,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [5356, 3356, 5678, 2362],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{
-						"name": "Enero",
-						"year": 2022,
-						"values": [13244, 23456, 2464, 24767]
-					},
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [24767, 24622, 2462, 2472]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [1247, 3573, 2345, 2466] }
-				]
-			}
-		}
-	},
-	{
-		"id": 0,
-		"name": "Telefonía",
-		"discount": 0.0,
-		"disable": false,
 		"views": {
-			"this_week": 2462,
+			"this_week": 0,
 			"last_week": 0,
 			"this_month": {
-				"name": "Abril",
+				"name": "",
 				"year": 2022,
-				"values": [1351, 357, 2345, 6890],
-				"total": 0
+				"values": "0*-*0*-*0*-*0"
 			},
 			"historic_month": {
 				"values": [
-					{ "name": "Enero", "year": 2022, "values": [1416, 4673, 3568, 2556] },
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [2132, 252, 23621, 5721]
-					},
-					{
-						"name": "Marzo",
-						"year": 2022,
-						"values": [2552, 6257, 2533, 245252]
-					}
-				]
-			}
-		},
-		"sales": {
-			"this_week": 87565,
-			"last_week": 3654,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [2445, 4245, 4367, 6678],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{
-						"name": "Enero",
-						"year": 2022,
-						"values": [34523, 2462, 2462, 2342]
-					},
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [245, 1474, 7674, 5474]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [2624, 345, 4684, 4674] }
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
 				]
 			}
 		}
-	},
-	{
-		"id": 0,
-		"name": "Cocina",
-		"discount": 0.0,
-		"disable": false,
+    },
+    {
+        "id": 10002,
+        "name": "Cámaras",
+        "discount":19,
+        "image":"url2",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
 		"views": {
-			"this_week": 2344,
-			"last_week": 3424,
+			"this_week": 0,
+			"last_week": 0,
 			"this_month": {
-				"name": "Abril",
+				"name": "",
 				"year": 2022,
-				"values": [2445, 4245, 4367, 6678],
-				"total": 0
+				"values": "0*-*0*-*0*-*0"
 			},
 			"historic_month": {
 				"values": [
-					{ "name": "Enero", "year": 2022, "values": [3456, 2465, 5788, 9658] },
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [6535, 6985, 6389, 8965]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [3644, 3634, 3563, 3563] }
-				]
-			}
-		},
-		"sales": {
-			"this_week": 87565,
-			"last_week": 6787,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [2445, 4245, 4367, 6678],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{ "name": "Enero", "year": 2022, "values": [0, 0, 0, 0] },
-					{ "name": "Febrero", "year": 2022, "values": [0, 0, 0, 0] },
-					{ "name": "Marzo", "year": 2022, "values": [0, 0, 0, 0] }
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
 				]
 			}
 		}
-	},
-	{
-		"id": 0,
-		"name": "Comestibles",
-		"discount": 0.0,
-		"disable": false,
+    },
+    {
+        "id": 10003,
+        "name": "Celulares",
+        "discount":19,
+        "image":"url3",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
 		"views": {
-			"this_week": 87565,
-			"last_week": 357346,
+			"this_week": 0,
+			"last_week": 0,
 			"this_month": {
-				"name": "Abril",
+				"name": "",
 				"year": 2022,
-				"values": [2445, 4245, 4367, 6678],
-				"total": 0
+				"values": "0*-*0*-*0*-*0"
 			},
 			"historic_month": {
 				"values": [
-					{ "name": "Enero", "year": 2022, "values": [2452, 2452, 4564, 4677] },
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [467, 3573, 3573, 3567]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [2314, 2676, 3546, 3343] }
-				]
-			}
-		},
-		"sales": {
-			"this_week": 324,
-			"last_week": 5346,
-			"this_month": {
-				"name": "Abril",
-				"year": 2022,
-				"values": [357, 3452, 4567, 786],
-				"total": 0
-			},
-			"historic_month": {
-				"values": [
-					{
-						"name": "Enero",
-						"year": 2022,
-						"values": [21345, 23452, 4567, 245]
-					},
-					{
-						"name": "Febrero",
-						"year": 2022,
-						"values": [2525, 7343, 5678, 2452]
-					},
-					{ "name": "Marzo", "year": 2022, "values": [4557, 2334, 3556, 2466] }
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
 				]
 			}
 		}
-	}
+    },
+    {
+        "id": 10004,
+        "name": "Televisores",
+        "discount":19,
+        "image":"url4",
+        "sales": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		},
+		"views": {
+			"this_week": 0,
+			"last_week": 0,
+			"this_month": {
+				"name": "",
+				"year": 2022,
+				"values": "0*-*0*-*0*-*0"
+			},
+			"historic_month": {
+				"values": [
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] },
+					{ "name": "", "year": 2022, "values": [0, 0, 0, 0] }
+				]
+			}
+		}
+    }
 ]
