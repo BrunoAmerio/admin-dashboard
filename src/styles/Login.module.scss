@@ -1,53 +1,105 @@
 @import './mixins';
 @import './colors';
 
+.imageContainer {
+	left: 10vh;
+	top: 20vh;
+	position: absolute;
+	text-align: center;
+	color: $black;
+}
+
 .container {
 	display: flex;
+	position: absolute;
+	height: 100vh;
+	margin: auto;
+	right: 0;
 	flex-direction: column;
-	text-align: center;
+	align-items: center;
+	background: linear-gradient(to bottom, #305dffdf, #4dffffb4);
+	justify-content: center;
+	color: white;
 
-	.formContainer {
+	form {
 		display: flex;
 		flex-direction: column;
-		width: 25%;
-		margin: auto;
-		margin-top: 50px;
-		gap: 10px;
-		padding: 20px;
-		border-radius: 8px;
-		justify-content: center;
-		background-color: $lightblue;
-		height: 220px;
+		align-items: center;
+		margin-bottom: 100px;
 
 		.inputContainer {
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			position: relative;
-
-			svg {
-				background-color: white;
-				border-radius: 8px;
-				height: 30px;
-				position: absolute;
-				left: 19px;
-			}
+			margin-top: 20px;
 
 			input {
-				height: 30px;
-				width: 80%;
-				padding: 0px 20px;
+				height: 4.3vh;
+				margin-left: 15px;
+				padding: 2px 10px;
+				font-size: 14px;
+				background-color: white;
 				border: none;
-				border-radius: 8px;
+				border-radius: 20px;
 
 				&:focus {
 					outline: none;
 				}
 			}
 		}
+
+		button {
+			@include buttonDefault(white);
+			margin-top: 30px;
+		}
+	}
+}
+
+@media (min-width: 360px) {
+	.imageContainer {
+		display: none;
+	}
+	.container {
+		width: 100%;
+		form {
+			margin-top: 5vh;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.imageContainer {
+		display: inline-block;
+		left: 0;
+		width: 450px;
 	}
 
-	.button {
-		@include buttonDefault($lightblue);
+	.container {
+		width: 45%;
+		form {
+			.inputContainer {
+				input {
+					width: 25vh;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.imageContainer {
+		width: 550px;
+		left: 12vh;
+	}
+
+	.container {
+		width: 40%;
+		form {
+			margin-top: 10vh;
+			.inputContainer {
+				input {
+					width: 32vh;
+				}
+			}
+		}
 	}
 }

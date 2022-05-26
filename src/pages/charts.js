@@ -7,7 +7,8 @@ import ShowChartIcon from '@mui/icons-material/ShowChart';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 
-import LineChart from '../components/LineChart/LineChart';
+import BarChart from '../components/BarChart/BarChart';
+import PieChart from '../components/PieChart/PieChart';
 
 const Charts = () => {
 	return (
@@ -17,61 +18,79 @@ const Charts = () => {
 			</h1>
 
 			<div className={style.thisWeekContainer}>
-				<h1>Esta semana:</h1>
-				<div className={style.item}>
+				<div className={style.item + ' ' + style.color1}>
 					<h2>
 						Ventas <TurnedInNotIcon />
 					</h2>
 					<h3>{chart.sales.this_week}</h3>
+					<p>Esta semana</p>
 				</div>
 
-				<div className={style.item}>
+				<div className={style.item + ' ' + style.color2}>
 					<h2>
 						Recaudaciones <ShowChartIcon />{' '}
 					</h2>
 					<h3>$ {chart.money_collection.this_week}</h3>
+					<p>Esta semana</p>
 				</div>
 
-				<div className={style.item}>
+				<div className={style.item + ' ' + style.color3}>
 					<h2>
 						Visitas <VisibilityIcon />{' '}
 					</h2>
 					<h3>{chart.visitors.this_week}</h3>
+					<p>Esta semana</p>
 				</div>
 			</div>
 
 			<div className={style.chartContainer}>
-				<div className={style.chart}>
-					<LineChart
-						data={chart.visitors.this_month}
-						label='Visitas este mes'
-					/>
-					<LineChart
-						data={chart.visitors.historic_month}
-						label='Visitas en todo el año'
-						annual={true}
-					/>
-				</div>
+				{/* VISITS */}
+				<div className={style.chartsContainer}>
+					<div className={style.barChart}>
+						<BarChart
+							data={chart.visitors.this_month}
+							label='Visitas este mes'
+						/>
+					</div>
 
-				<div className={style.chart}>
-					<LineChart data={chart.sales.this_month} label='Ventas este mes' />
-					<LineChart
-						data={chart.sales.historic_month}
-						label='Ventas en todo el año'
-						annual={true}
-					/>
+					<div className={style.donutsChart}>
+						<PieChart
+							data={chart.visitors.historic_month}
+							label='Visitantes'
+							annual={true}
+						/>
+					</div>
 				</div>
+				{/* COLLECTION */}
+				<div className={style.chartsContainer}>
+					<div className={style.barChart}>
+						<BarChart
+							data={chart.money_collection.this_month}
+							label='Recaudacion este mes'
+						/>
+					</div>
 
-				<div className={style.chart}>
-					<LineChart
-						data={chart.money_collection.this_month}
-						label='Recaudacion este mes'
-					/>
-					<LineChart
-						data={chart.money_collection.historic_month}
-						label='Recaudacion en todo el año'
-						annual={true}
-					/>
+					<div className={style.donutsChart}>
+						<PieChart
+							data={chart.money_collection.historic_month}
+							label='Recaudaciones'
+							annual={true}
+						/>
+					</div>
+				</div>
+				{/* SALES */}
+				<div className={style.chartsContainer}>
+					<div className={style.barChart}>
+						<BarChart data={chart.sales.this_month} label='Ventas este mes' />
+					</div>
+
+					<div className={style.donutsChart}>
+						<PieChart
+							data={chart.sales.historic_month}
+							label='Ventas'
+							annual={true}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

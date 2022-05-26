@@ -1,27 +1,44 @@
+@import '../styles/colors.scss';
+
 .container {
-	width: 80%;
-	margin: auto;
+	position: absolute;
+	width: 86%;
+	right: 0;
+	background-color: #e2e1e1;
 
 	h1 {
 		display: flex;
 		align-items: center;
 		gap: 5px;
+		color: $black;
+		margin-left: 42px;
 	}
 
 	.thisWeekContainer {
 		display: flex;
-		justify-content: space-around;
+		width: 100%;
+		margin: auto;
+		padding: 10px 5px;
+		justify-content: space-evenly;
 		align-items: center;
 
-		h1 {
-			font-size: 22px;
+		.color1 {
+			background: linear-gradient(to right, #f77a13de, #f7bc34c2);
+		}
+
+		.color2 {
+			background: linear-gradient(to right, #36a3ebce, #7913ffb9);
+		}
+
+		.color3 {
+			background: linear-gradient(to right, #12c902cb, #48ee88ee);
 		}
 
 		.item {
-			background-color: palevioletred;
+			display: flex;
+			flex-direction: column;
 			text-align: center;
-			width: 230px;
-			align-items: center;
+			justify-content: space-around;
 			border-radius: 10px;
 			padding: 30px;
 			color: white;
@@ -30,7 +47,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				gap: 10px;
+				gap: 15px;
 				font-size: 18px;
 				margin: 0;
 			}
@@ -44,11 +61,66 @@
 }
 
 .chartContainer {
-	margin-top: 80px;
-	.chart {
+	display: flex;
+	overflow: scroll;
+	height: 470px;
+	width: 70%;
+	padding: 15px 0px;
+	margin: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+
+	.chartsContainer {
 		display: flex;
-		margin: auto;
-		justify-content: space-around;
-		width: 500px;
+		width: 1300px;
+		justify-content: space-evenly;
+		gap: 80px;
+		scroll-snap-align: center;
+		margin-top: 40px;
+
+		.barChart {
+			width: 700px;
+			background-color: white;
+			border-radius: 8px;
+			padding: 40px;
+		}
+		.donutsChart {
+			width: 25%;
+		}
 	}
+}
+
+@media (min-width: 1800px) {
+	.chartContainer {
+		width: 60% !important;
+		gap: 400px !important;
+		margin: auto !important;
+	}
+	.thisWeekContainer {
+		padding: 15px 50px !important;
+		.item {
+			padding: 73px 30px !important;
+			width: 30vh !important;
+			height: 20vh !important;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.chartContainer {
+		width: 85%;
+		gap: 400px;
+		margin: auto;
+	}
+	.thisWeekContainer {
+		padding: 15px 50px !important;
+		.item {
+			padding: 73px 30px;
+			width: 36vh;
+			height: 24vh;
+		}
+	}
+}
+
+@media (min-width: 360px) {
 }

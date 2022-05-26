@@ -10,7 +10,7 @@ const loginHook = async (dispatch, userData) => {
 	try {
 		console.log('Debería buscar los datos del usuario');
 		dispatch(fetchDataUser(userData));
-		window.location.href = '/products&categories';
+		window.location.href = '/charts';
 	} catch (error) {
 		dispatch(loginFailure());
 	}
