@@ -49,9 +49,9 @@ const Barchart = ({ data, label, annual }) => {
 	};
 
 	useEffect(() => {
-		const label = [];
-		const score = [];
 		if (annual) {
+			const label = [];
+			const score = [];
 			data.forEach(month => {
 				label.push(month.name);
 				score.push(month.total);

@@ -1,6 +1,5 @@
 import { Doughnut } from 'react-chartjs-2';
 import style from './PieChart.module.scss';
-
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -12,7 +11,6 @@ import {
 	Legend,
 	Filler,
 } from 'chart.js';
-import { useEffect } from 'react';
 
 ChartJS.register(
 	CategoryScale,
@@ -25,7 +23,10 @@ ChartJS.register(
 	Filler
 );
 
-const PieChart = ({ data, label, annual }) => {
+// Debe enviarse el nombre del mes y el valor para ese nombre
+// El label es el titulo que se mostrará por encima del grafico
+const PieChart = ({ data, label }) => {
+	// Seteamos las configuraciones del gráfico
 	const options = {
 		responsive: true,
 		width: 1000,
@@ -42,37 +43,33 @@ const PieChart = ({ data, label, annual }) => {
 			},
 		},
 	};
+
+	const colors = [
+		'#ff6384',
+		'#36a2eb',
+		'#ffcd56',
+		'#12c902cb',
+		'#ff5b5bde',
+		'#bc4dfdc4',
+		'#242fc7de',
+	];
+
+	// Seteamos las propiedades del gráfico
 	const props = {
 		datasets: [
 			{
-				label,
-				data: data.weeks || [],
+				data: data.map(item => item.total),
 				tension: 0.2,
-				backgroundColor: [
-					'rgb(255, 99, 132)',
-					'rgb(54, 162, 235)',
-					'rgb(255, 205, 86)',
-					'#12c902cb',
-				],
+				backgroundColor: colors,
 				pointRadius: 6,
 			},
 		],
-		labels: data.map(month => month.name),
+		labels: data.map(item => item.name),
 	};
-
-	useEffect(() => {
-		const score = [];
-		if (annual) {
-			data.forEach(month => {
-				score.push(month.total);
-			});
-			props.datasets[0].data = score;
-		}
-	}, []);
 
 	return (
 		<div className={style.container}>
-			<h1>{label}</h1>
+			<h1>{label || 'Undefined'}</h1>
 			<div className={style.donutContainer}>
 				<Doughnut data={props} options={options} height={1000} width={1000} />
 			</div>
