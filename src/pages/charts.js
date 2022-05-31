@@ -15,29 +15,50 @@ import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import PieChart from '../components/PieChart/PieChart';
 
 const Charts = () => {
-	const [salesCategories, setSalesCategories] = useState([]);
-	const [viewsCategories, setViewsCategories] = useState([]);
+	const [salesCategoriesThisMonth, setSalesCategoriesThisMonth] = useState([]);
+	const [salesCategoriesHistoric, setSalesCategoriesHistoric] = useState([]);
+	const [viewsCategoriesThisMonth, setViewsCategoriesThisMonth] = useState([]);
+	const [viewsCategoriesHistoric, setViewsCategoriesHistoric] = useState([]);
 
 	useEffect(() => {
-		const tempSalesCategories = [];
-		const tempViewsCategories = [];
+		const tempSalesCategoriesThisMonth = [];
+		const tempViewsCategoriesThisMont = [];
+		const tempSalesCategoriesHistoric = [];
+		const tempViewsCategoriesHistoric = [];
 		categoriesData.forEach(category => {
-			tempSalesCategories.push({
+			tempSalesCategoriesThisMonth.push({
 				name: category.name,
 				total: category.sales.this_month.total,
 			});
 
-			tempViewsCategories.push({
+			tempViewsCategoriesThisMont.push({
 				name: category.name,
 				total: category.views.this_month.total,
 			});
+
+			// Accedemos a los datos historicos
+			category.sales.historic_month.forEach(month => {
+				tempSalesCategoriesHistoric.push({
+					name: month.name,
+					total: month.total,
+				});
+			});
+
+			category.views.historic_month.forEach(month => {
+				tempViewsCategoriesHistoric.push({
+					name: month.name,
+					total: month.total,
+				});
+			});
 		});
 
-		setSalesCategories(tempSalesCategories);
-		setViewsCategories(tempViewsCategories);
+		// Este mes
+		setSalesCategoriesThisMonth(tempSalesCategoriesThisMonth);
+		setViewsCategoriesThisMonth(tempViewsCategoriesThisMont);
+		// Historicos
+		setSalesCategoriesHistoric(tempSalesCategoriesHistoric);
+		setViewsCategoriesHistoric(tempViewsCategoriesHistoric);
 	}, []);
-
-	console.log(salesCategories);
 
 	return (
 		<div className={style.container}>
@@ -135,12 +156,12 @@ const Charts = () => {
 			</div>
 
 			<div className={style.pieContainer}>
-				{salesCategories ? (
-					<PieChart data={salesCategories} label='Ventas este mes' />
+				{salesCategoriesThisMonth ? (
+					<PieChart data={salesCategoriesThisMonth} label='Ventas este mes' />
 				) : null}
 
-				{viewsCategories ? (
-					<PieChart data={viewsCategories} label='Visitas este mes' />
+				{viewsCategoriesThisMonth ? (
+					<PieChart data={viewsCategoriesThisMonth} label='Visitas este mes' />
 				) : null}
 			</div>
 		</div>

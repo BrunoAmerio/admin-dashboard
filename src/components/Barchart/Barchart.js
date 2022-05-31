@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import {
@@ -43,25 +42,29 @@ const Barchart = ({ data, label, annual }) => {
 				borderColor: '#11b7e0af',
 				backgroundColor: ['#ff6385ad', '#36a2ebad', '#ffcd56ad', '#13ca028f'],
 				pointRadius: 6,
+				stack: 'Stacked 1',
 			},
 		],
 		labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
 	};
 
-	useEffect(() => {
-		if (annual) {
-			const label = [];
-			const score = [];
-			data.forEach(month => {
-				label.push(month.name);
-				score.push(month.total);
-			});
-			props.datasets[0].data = score;
-			props.labels = label;
-		}
-	}, []);
+	if (annual) {
+		const label = [];
+		const score = [];
+		data.forEach(month => {
+			label.push(month.name);
+			score.push(month.total);
+		});
+		props.datasets[0].data = score;
+		props.labels = label;
+	}
 
-	return <Bar data={props} options={options} />;
+	return (
+		<div>
+			<di id='myChart'></di>
+			<Bar data={props} options={options} />;
+		</div>
+	);
 };
 
 export default Barchart;
