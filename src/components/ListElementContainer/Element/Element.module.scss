@@ -1,0 +1,20 @@
+.container {
+	text-align: center;
+	align-items: center;
+	position: relative;
+
+	h1 {
+		font-size: 17px;
+	}
+
+	&:hover {
+		background-color: lightblue;
+		cursor: pointer;
+	}
+
+	.floatButton {
+		position: absolute;
+		right: -25px;
+		top: 33px;
+	}
+}
