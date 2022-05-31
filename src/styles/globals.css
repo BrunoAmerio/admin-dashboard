@@ -22,4 +22,5 @@ a {
 @font-face {
 	font-family: 'Poppins-Regular';
 	src: url('./fonts/Poppins-Light.otf');
+	font-display: swap;
 }

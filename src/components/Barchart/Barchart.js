@@ -62,7 +62,7 @@ const Barchart = ({ data, label, annual }) => {
 	return (
 		<div>
 			<di id='myChart'></di>
-			<Bar data={props} options={options} />;
+			<Bar data={props} options={options} />
 		</div>
 	);
 };
