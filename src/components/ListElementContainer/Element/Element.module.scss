@@ -2,19 +2,26 @@
 	text-align: center;
 	align-items: center;
 	position: relative;
+	padding: 5px;
+	border-radius: 8px;
+	cursor: pointer;
 
 	h1 {
 		font-size: 17px;
+		white-space: nowrap;
 	}
 
 	&:hover {
-		background-color: lightblue;
-		cursor: pointer;
+		background-color: #24f3f3a6;
+		h1 {
+			color: rgb(255, 255, 255);
+		}
 	}
 
 	.floatButton {
 		position: absolute;
 		right: -25px;
-		top: 33px;
+		top: 50%;
+		transform: translate(0, -50%);
 	}
 }

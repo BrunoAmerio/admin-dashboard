@@ -1,10 +1,10 @@
-@import '../styles/colors.scss';
+@import '../styles/config/colors.scss';
 
 .container {
 	position: absolute;
 	width: 86%;
 	right: 0;
-	background-color: #e2e1e1;
+	background-color: $background;
 
 	h1 {
 		display: flex;
@@ -58,6 +58,15 @@
 		}
 	}
 
+	.section {
+		background-color: white;
+		width: 90%;
+		margin: auto;
+		border-radius: 8px;
+		margin-top: 5px;
+		padding: 15px 0px;
+	}
+
 	.slideChartContainer {
 		display: flex;
 		overflow: scroll;
@@ -79,7 +88,7 @@
 
 @media (min-width: 1800px) {
 	.slideChartContainer {
-		width: 63% !important;
+		width: 66% !important;
 	}
 	.thisWeekContainer {
 		padding: 15px 50px !important;
@@ -93,13 +102,13 @@
 
 @media (min-width: 1400px) {
 	.slideChartContainer {
-		width: 80%;
+		width: 86%;
 	}
 }
 
 @media (min-width: 1200px) {
 	.slideChartContainer {
-		width: 85%;
+		width: 86%;
 	}
 	.thisWeekContainer {
 		padding: 15px 50px;

@@ -1,9 +1,21 @@
 .container {
-	width: fit-content;
+	width: 600px;
+	height: fit-content;
 	padding: 0px 10px;
+	padding-bottom: 55px;
 	margin: auto;
+	position: relative;
+
 	.label {
 		text-align: center;
 		text-transform: capitalize;
+	}
+
+	.pagination {
+		display: flex;
+		width: 96%;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
 	}
 }

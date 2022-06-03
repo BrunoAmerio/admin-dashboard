@@ -1,0 +1,100 @@
+@import './colors.scss';
+
+@mixin buttonDefault($color, $secondColor) {
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	margin: auto;
+	padding: 10px;
+	color: $color;
+	font-weight: bolder;
+	border: 2px solid $color;
+	border-radius: 8px;
+	background-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+
+	&:hover {
+		background-color: $color;
+		transition: 0.5s;
+		color: $secondColor;
+	}
+}
+
+@mixin inputArea() {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	text-align: center;
+	margin: auto;
+
+	input[type='text'] {
+		@include inputDefault();
+	}
+
+	input[type='number'] {
+		@include inputNumber();
+	}
+	textarea {
+		@include textArea();
+	}
+}
+
+@mixin inputFile($color) {
+	background-color: $color;
+	border-radius: 7px;
+	width: fit-content;
+	padding: 20px 40px;
+	position: relative;
+	font-family: 'Segoe UI';
+
+	input[type='file'] {
+		cursor: pointer;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		background-color: red;
+		height: 100%;
+	}
+}
+
+@mixin inputDefault() {
+	width: 350px;
+	height: 30px;
+	border: none;
+	padding: 0px 5px;
+	border-radius: 8px;
+	background-color: lightgray;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin inputNumber() {
+	border: none;
+	border-radius: 8px;
+	height: 30px;
+	width: 80px;
+	background-color: lightgray;
+	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin textArea() {
+	background-color: lightgray;
+	border: none;
+	border-radius: 8px;
+	resize: none;
+	padding: 15px;
+	font-family: 'Segoe UI';
+	&:focus {
+		outline: none;
+	}
+}

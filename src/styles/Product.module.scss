@@ -1,0 +1,47 @@
+@import './config/colors.scss';
+
+.main {
+	position: absolute;
+	width: 86%;
+	right: 0;
+	text-align: center;
+	background-color: $background;
+
+	p {
+		width: 60%;
+		margin: auto;
+	}
+
+	.imageDefault {
+		height: 50vh;
+		width: 80vh;
+		margin: auto;
+		margin-top: 50px;
+		margin-bottom: 75px;
+		border-radius: 15px;
+		background: #e0e0e0;
+		box-shadow: 20px 20px 38px #777777, -20px -20px 60px #d8d8d8;
+	}
+
+	.mainData {
+		display: flex;
+		justify-content: space-evenly;
+		margin-bottom: 50px;
+	}
+
+	.chartsContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		margin-top: 100px;
+		.section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h2,
+			p {
+				margin: 0px;
+			}
+		}
+	}
+}

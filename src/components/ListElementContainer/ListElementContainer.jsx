@@ -2,6 +2,7 @@ import style from './ListElementContainer.module.scss';
 // Components
 import Element from './Element/Element';
 import { Pagination } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 /*
 	Este componente se encarga de dibujar el listado completo de elementos que le pasemos como parametro a travez de "data"
@@ -19,8 +20,20 @@ const ListElementContainer = ({
 	},
 	redirectTo,
 }) => {
+	const [page, setPage] = useState([]);
 	const limitPerPage = 10;
 	const totalPages = Math.ceil(data.length / limitPerPage);
+
+	const setCurrentPage = event => {
+		const pageNum = Number(event.target.innerText);
+		const max = limitPerPage * pageNum;
+		const min = max - limitPerPage;
+		setPage(data.slice(min, max));
+	};
+
+	useEffect(() => {
+		setPage(data.slice(0, 10));
+	}, []);
 
 	// --------------
 	// Styles In Line
@@ -44,7 +57,7 @@ const ListElementContainer = ({
 			</div>
 
 			<div className={style.body}>
-				{data.map(element => (
+				{page?.map(element => (
 					<Element
 						data={element}
 						redirectTo={redirectTo}
@@ -54,7 +67,14 @@ const ListElementContainer = ({
 				))}
 			</div>
 
-			<Pagination count={totalPages} />
+			<div className={style.pagination}>
+				<Pagination
+					count={totalPages}
+					onChange={setCurrentPage}
+					hidePrevButton
+					hideNextButton
+				/>
+			</div>
 		</div>
 	);
 };

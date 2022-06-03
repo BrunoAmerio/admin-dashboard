@@ -1,0 +1,29 @@
+@import '../styles/config/mixins.scss';
+
+.container {
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.numberContainer {
+		display: flex;
+		gap: 55px;
+	}
+
+	.inputArea {
+		@include inputArea();
+	}
+
+	.inputFile {
+		@include inputFile(#2cceffb6);
+		margin: auto;
+	}
+
+	.button {
+		@include buttonDefault(#2cceff, black);
+		margin-top: 20px;
+	}
+}

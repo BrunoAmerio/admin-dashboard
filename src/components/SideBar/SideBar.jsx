@@ -1,5 +1,5 @@
 import { Divider } from '@mui/material';
-import styles from './Sidebar.module.scss';
+import styles from './SideBar.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
@@ -15,6 +15,7 @@ import PersonIcon from '@mui/icons-material/Person';
 const Sidebar = () => {
 	const email = useSelector(state => state.user.email);
 	const router = useRouter();
+	// Verificamos que la ruta no sea el index, que seriá el LOGIN
 	const avaible = router.pathname === '/';
 
 	return (

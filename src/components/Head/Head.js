@@ -11,7 +11,7 @@ const HeadDefault = ({ title, description, meta }) => {
 		<Head>
 			<title>{title || 'Default Text'} - Admin Dashboard</title>
 			<meta name='description' content={description || ''} />
-			<meta name='keywords' content={meta || ''} />
+			<meta name='keywords' content={meta + ' admin ecommerce' || ''} />
 		</Head>
 	);
 };

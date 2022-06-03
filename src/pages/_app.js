@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/Globals.scss';
 import { Provider } from 'react-redux';
 import store from '../redux/store/index';
 
@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
 		<Provider store={store}>
 			<div className='container'>
 				<Sidebar />
-				<Component {...pageProps} />
+				<div className='componet'>
+					<Component {...pageProps} />
+				</div>
 			</div>
 		</Provider>
 	);

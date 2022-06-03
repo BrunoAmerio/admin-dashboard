@@ -13,9 +13,11 @@ const Element = ({ data, redirectTo, colums }) => {
 	// Controladores del menu
 	const [anchorEl, setAnchorEl] = useState(null);
 	const openMenu = Boolean(anchorEl);
+
 	const handleClick = event => {
 		setAnchorEl(event.currentTarget);
 	};
+
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
@@ -30,7 +32,7 @@ const Element = ({ data, redirectTo, colums }) => {
 	return (
 		<div className={style.container}>
 			<Link href={`${redirectTo}/${data.id}`}>
-				<div style={stylesInLine}>
+				<div style={stylesInLine} className={style.test}>
 					{colums.map(name => {
 						return <h1 key={name}>{data[name]}</h1>;
 					})}

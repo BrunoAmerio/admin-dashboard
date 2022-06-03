@@ -1,10 +1,9 @@
 .container {
 	display: flex;
 	justify-content: space-evenly;
-	gap: 60px;
+	align-items: center;
+	gap: 15px;
 	scroll-snap-align: center;
-	margin: auto;
-	margin-top: 40px;
 
 	.barChart {
 		width: 700px;
@@ -12,6 +11,7 @@
 		border-radius: 8px;
 		padding: 20px;
 	}
+
 	.pieChart {
 		width: 25%;
 	}

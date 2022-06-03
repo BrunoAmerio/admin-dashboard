@@ -1,0 +1,42 @@
+@import './config/colors.scss';
+@import './config/fonts.scss';
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins-Regular';
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+
+	.componet {
+		width: 100%;
+		h1,
+		h2 {
+			font-family: 'Poppins-italic';
+		}
+
+		.title {
+			margin-left: 50px;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0px;
+}

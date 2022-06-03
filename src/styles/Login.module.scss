@@ -1,5 +1,5 @@
-@import './mixins';
-@import './colors';
+@import './config/mixins.scss';
+@import './config/colors.scss';
 
 .imageContainer {
 	left: 10vh;
@@ -48,7 +48,7 @@
 		}
 
 		button {
-			@include buttonDefault(white);
+			@include buttonDefault(white, $black);
 			margin-top: 30px;
 		}
 	}
