@@ -20,6 +20,8 @@ const Charts = () => {
 	const [viewsCategoriesThisMonth, setViewsCategoriesThisMonth] = useState([]);
 	const [viewsCategoriesHistoric, setViewsCategoriesHistoric] = useState([]);
 
+	console.log(salesCategoriesHistoric, viewsCategoriesHistoric);
+
 	useEffect(() => {
 		const tempSalesCategoriesThisMonth = [];
 		const tempViewsCategoriesThisMont = [];
