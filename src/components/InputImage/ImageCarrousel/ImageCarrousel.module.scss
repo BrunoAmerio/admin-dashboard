@@ -1,0 +1,11 @@
+.container {
+	.arrows {
+		display: flex;
+		gap: 50px;
+		width: 100%;
+		justify-content: center;
+		& > * {
+			cursor: pointer;
+		}
+	}
+}
