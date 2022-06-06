@@ -10,14 +10,26 @@ const CreateNewProduct = () => {
 		description: '',
 		price: 0,
 		stock: 0,
+		discount: 0,
 		images: [],
 	});
 
+	console.log(product);
+
 	const handleChange = event => {
-		setProduct({
-			...product,
-			[event.target.name]: event.target.value,
-		});
+		if (event.target.id === 'number') {
+			const value = Number(event.target.value);
+
+			setProduct({
+				...product,
+				[event.target.name]: value,
+			});
+		} else {
+			setProduct({
+				...product,
+				[event.target.name]: event.target.value,
+			});
+		}
 	};
 
 	return (
@@ -39,12 +51,32 @@ const CreateNewProduct = () => {
 				<div className={style.numberContainer}>
 					<div className={style.inputArea}>
 						<label>Stock</label>
-						<input type='number' name='stock' onChange={handleChange} />
+						<input
+							type='number'
+							name='stock'
+							id='number'
+							onChange={handleChange}
+						/>
 					</div>
 
 					<div className={style.inputArea}>
 						<label>Precio</label>
-						<input type='number' name='price' onChange={handleChange} />
+						<input
+							type='number'
+							name='price'
+							id='number'
+							onChange={handleChange}
+						/>
+					</div>
+
+					<div className={style.inputArea}>
+						<label>Descuento</label>
+						<input
+							type='number'
+							name='discount'
+							id='number'
+							onChange={handleChange}
+						/>
 					</div>
 				</div>
 

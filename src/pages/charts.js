@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
+
+// Components
+import ComparativeBarChart from '../components/ComparativeBarChart/ComparativeBarChart';
+import ComparativePieChart from '../components/ComparativePieChart/ComparativePieChart';
 import Head from 'next/head';
-import MainCharstContainer from '../components/MainChartsContainer/MainChartsContainer';
-import style from '../styles/Chart.module.scss';
 
 // DATA
 import ecommerceData from '../data/ecommerce.json';
 import categoriesData from '../data/categories.json';
 
 // Icons
-import BarChartIcon from '@mui/icons-material/BarChart';
+import style from '../styles/Chart.module.scss';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
-import PieChart from '../components/PieChart/PieChart';
 
 const Charts = () => {
 	const [salesCategoriesThisMonth, setSalesCategoriesThisMonth] = useState([]);
@@ -70,110 +71,84 @@ const Charts = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<h1>
-				<BarChartIcon fontSize='large' /> Graficos
-			</h1>
+			<div className={style.thisWeekContainer}>
+				<div className={style.item + ' ' + style.color1}>
+					<h2>
+						Ventas <TurnedInNotIcon />
+					</h2>
+					<h3>{ecommerceData.sales.this_week}</h3>
+					<p>Esta semana</p>
+				</div>
 
-			<div className={style.section}>
-				<div className={style.thisWeekContainer}>
-					<div className={style.item + ' ' + style.color1}>
-						<h2>
-							Ventas <TurnedInNotIcon />
-						</h2>
-						<h3>{ecommerceData.sales.this_week}</h3>
-						<p>Esta semana</p>
-					</div>
+				<div className={style.item + ' ' + style.color2}>
+					<h2>
+						Recaudaciones <ShowChartIcon />{' '}
+					</h2>
+					<h3>$ {ecommerceData.money_collection.this_week}</h3>
+					<p>Esta semana</p>
+				</div>
 
-					<div className={style.item + ' ' + style.color2}>
-						<h2>
-							Recaudaciones <ShowChartIcon />{' '}
-						</h2>
-						<h3>$ {ecommerceData.money_collection.this_week}</h3>
-						<p>Esta semana</p>
-					</div>
-
-					<div className={style.item + ' ' + style.color3}>
-						<h2>
-							Visitas <VisibilityIcon />{' '}
-						</h2>
-						<h3>{ecommerceData.visitors.this_week}</h3>
-						<p>Esta semana</p>
-					</div>
+				<div className={style.item + ' ' + style.color3}>
+					<h2>
+						Visitas <VisibilityIcon />{' '}
+					</h2>
+					<h3>{ecommerceData.visitors.this_week}</h3>
+					<p>Esta semana</p>
 				</div>
 			</div>
 
-			<div className={style.section}>
-				<div className={style.slideChartContainer}>
-					{/* Visitas */}
-					<MainCharstContainer
-						barChart={{
-							data: ecommerceData.visitors.this_month,
-							label: 'Visitas este mes',
+			<div className={style.mainChartsContainer}>
+				<div className={style.slideChart}>
+					<ComparativeBarChart
+						label='Recaudación'
+						XLegend={'Semana'}
+						data1={{
+							name: 'Este mes',
+							value: ecommerceData.money_collection.this_month.weeks,
 						}}
-						pieChart={{
-							data: ecommerceData.visitors.historic_month,
-							label: 'Visitantes',
-						}}
-					/>
-
-					{/* Ventas  */}
-					<MainCharstContainer
-						barChart={{
-							data: ecommerceData.sales.this_month,
-							label: 'Ventas este mes',
-						}}
-						pieChart={{
-							data: ecommerceData.sales.historic_month,
-							label: 'Ventas',
+						data2={{
+							name: 'Mes Pasado',
+							value:
+								ecommerceData.money_collection.historic_month[
+									ecommerceData.money_collection.historic_month.length - 1
+								].weeks,
 						}}
 					/>
 
-					{/* Recaudación  */}
-					<MainCharstContainer
-						barChart={{
-							data: ecommerceData.money_collection.this_month,
-							label: 'Recaudacion este mes',
+					<ComparativeBarChart
+						label='Visitas'
+						XLegend={'Semana'}
+						data1={{
+							name: 'Este mes',
+							value: ecommerceData.visitors.this_month.weeks,
 						}}
-						pieChart={{
-							data: ecommerceData.money_collection.historic_month,
-							label: 'Recaudacion',
+						data2={{
+							name: 'Mes pasado',
+							value:
+								ecommerceData.visitors.historic_month[
+									ecommerceData.visitors.historic_month.length - 1
+								].weeks,
+						}}
+					/>
+
+					<ComparativeBarChart
+						label='Ventas'
+						XLegend={'Semana'}
+						data1={{
+							name: 'Este mes',
+							value: ecommerceData.sales.this_month.weeks,
+						}}
+						data2={{
+							name: 'Mes pasado',
+							value:
+								ecommerceData.sales.historic_month[
+									ecommerceData.sales.historic_month.length - 1
+								].weeks,
 						}}
 					/>
 				</div>
-			</div>
 
-			<div className={style.section}>
-				<div className={style.pieContainer}>
-					{salesCategoriesThisMonth ? (
-						<PieChart data={salesCategoriesThisMonth} label='Ventas este mes' />
-					) : null}
-
-					{viewsCategoriesThisMonth ? (
-						<PieChart
-							data={viewsCategoriesThisMonth}
-							label='Visitas este mes'
-						/>
-					) : null}
-				</div>
-
-				{/* Mapeo sobre todas las categorias para representar sus datos en gráficos */}
-				<div className={style.slideChartContainer}>
-					{categoriesData.map(category => {
-						return (
-							<MainCharstContainer
-								key={category.id}
-								barChart={{
-									data: category.views.this_month,
-									label: `Visitas en: ${category.name} este mes `,
-								}}
-								pieChart={{
-									data: category.sales.historic_month,
-									label: 'Ventas',
-								}}
-							/>
-						);
-					})}
-				</div>
+				<ComparativePieChart dataKey='views' data={categoriesData} />
 			</div>
 		</div>
 	);

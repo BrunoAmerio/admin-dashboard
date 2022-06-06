@@ -15,8 +15,8 @@ const ImageCarrousel = ({ images }) => {
 
 			<div className={style.arrows}>
 				<ArrowBackIosIcon
-					fontSize='small'
-					disable={true}
+					sx={{ color: 'white' }}
+					fontSize='large'
 					onClick={() => {
 						if (current >= 1) {
 							setCurrent(current - 1);
@@ -25,7 +25,8 @@ const ImageCarrousel = ({ images }) => {
 				/>
 
 				<ArrowForwardIosIcon
-					fontSize='small'
+					sx={{ color: 'white' }}
+					fontSize='large'
 					onClick={() => {
 						if (current < images.length - 1) {
 							setCurrent(current + 1);

@@ -1,0 +1,10 @@
+.container {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 8px;
+	padding: 13px 15px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%) translateY(10px);
+	z-index: 1000;
+}

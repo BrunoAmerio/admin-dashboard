@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
 		<Provider store={store}>
 			<div className='container'>
 				<Sidebar />
-				<div className='componet'>
+				<div className='component'>
 					<Component {...pageProps} />
 				</div>
 			</div>

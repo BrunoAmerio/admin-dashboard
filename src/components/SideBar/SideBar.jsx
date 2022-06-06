@@ -31,7 +31,7 @@ const Sidebar = () => {
 			<Link href='/charts'>
 				<a className={styles.item}>
 					<BarChartIcon />
-					<h2>Graficos</h2>
+					<h2>Panel</h2>
 				</a>
 			</Link>
 
@@ -40,15 +40,15 @@ const Sidebar = () => {
 			<Link href='/products&categories'>
 				<a className={styles.item}>
 					<CategoryIcon />
-					<h2>Productos y categorias</h2>
+					<h2>Productos</h2>
 				</a>
 			</Link>
 			<Divider variant='middle' />
 
-			<Link href='/transactions'>
+			<Link href='/orders'>
 				<a className={styles.item}>
 					<PaidIcon />
-					<h2>Transferencias</h2>
+					<h2>Ordenes</h2>
 				</a>
 			</Link>
 			<Divider variant='middle' />
@@ -64,7 +64,7 @@ const Sidebar = () => {
 			<Link href='/documentation'>
 				<a className={styles.item}>
 					<ArticleIcon />
-					<h2>Documentacion</h2>
+					<h2>Documentación</h2>
 				</a>
 			</Link>
 		</div>

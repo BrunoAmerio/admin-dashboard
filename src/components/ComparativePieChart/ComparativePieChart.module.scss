@@ -1,0 +1,32 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 210px;
+	height: 330px;
+	align-items: center;
+	border-radius: 8px;
+	padding-top: 5px;
+	background-color: white;
+
+	.title {
+		font-size: 15px;
+		margin: 0px;
+		text-transform: capitalize;
+		color: rgb(126, 125, 125);
+	}
+
+	.label {
+		h2 {
+			display: flex;
+			font-size: 12px;
+			align-items: center;
+			gap: 5px;
+			margin: 0px;
+
+			div {
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+}

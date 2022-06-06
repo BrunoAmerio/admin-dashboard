@@ -40,7 +40,7 @@ const ListElementContainer = ({
 	const stylesInLine = {
 		subtitle: {
 			display: 'grid',
-			gridTemplateColumns: `repeat(${label.subtitles.length}, 1fr)`,
+			gridTemplateColumns: `1fr repeat(${label.subtitles.length - 1}, 100px)`,
 		},
 	};
 
