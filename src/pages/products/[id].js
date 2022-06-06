@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
-import HeadDefault from '../../components/Head/Head';
-import MainChartsContainer from '../../components/MainChartsContainer/MainChartsContainer';
 
+// Components
+import HeadDefault from '../../components/Head/Head';
+import LineChart from '../../components/LinealChart/LinealChart';
+// Data
 import productsData from '../../data/products.json';
 import style from '../../styles/Product.module.scss';
 
@@ -28,9 +30,9 @@ const ProductsDetail = () => {
 				<h1>{result.title}</h1>
 				{!result.images ? <div className={style.imageDefault} /> : null}
 				<div className={style.mainData}>
-					<h4>Price: ${result.price}</h4>
+					<h4>Precio: ${result.price}</h4>
 					<h4>Stock: {result.stock}</h4>
-					<h4>Discount: {result.discount}%</h4>
+					<h4>Descuento: {result.discount}%</h4>
 				</div>
 
 				<p>{result.description}</p>
@@ -39,44 +41,20 @@ const ProductsDetail = () => {
 					<div className={style.section}>
 						<h2>Vistas</h2>
 						<p>Esta semana: {result.views.this_week} </p>
-						<MainChartsContainer
-							barChart={{
-								data: result.views.this_month,
-								label: 'Views this month',
-							}}
-							pieChart={{
-								data: result.views.historic_month,
-								label: 'Views annual',
-							}}
-						/>
+						<LineChart data={result.views.this_month.weeks} label='Semana' />
 					</div>
 					<div className={style.section}>
 						<h2>Recaudacion</h2>
 						<p>Esta semana: ${result.money_collection.this_week}</p>
-						<MainChartsContainer
-							barChart={{
-								data: result.money_collection.this_month,
-								label: 'Money Collection this month',
-							}}
-							pieChart={{
-								data: result.money_collection.historic_month,
-								label: 'Money collection annual',
-							}}
+						<LineChart
+							data={result.money_collection.this_month.weeks}
+							label='Semana'
 						/>
 					</div>
 					<div className={style.section}>
 						<h2>Ventas</h2>
 						<p>Esta semana: {result.sales.this_week}</p>
-						<MainChartsContainer
-							barChart={{
-								data: result.sales.this_month,
-								label: 'Sales this month',
-							}}
-							pieChart={{
-								data: result.views.historic_month,
-								label: 'Sales annual',
-							}}
-						/>
+						<LineChart data={result.sales.this_month.weeks} label='Semana' />
 					</div>
 				</div>
 			</main>

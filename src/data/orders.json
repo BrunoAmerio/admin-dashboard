@@ -1,0 +1,68 @@
+[
+	{
+		"id": 120,
+		"province": "Santiago del Estero",
+		"city": "Fernandez",
+		"cpp": 4322,
+		"address": "Libertad 430",
+		"total": 25000,
+		"cart": {
+			"products": []
+		}
+	},
+	{
+		"id": 121,
+		"province": "Santiago del Estero",
+		"city": "Fernandez",
+		"cpp": 4322,
+		"address": "Libertad 430",
+		"total": 20000,
+		"cart": {
+			"products": []
+		}
+	},
+	{
+		"id": 122,
+		"province": "Santiago del Estero",
+		"city": "Fernandez",
+		"cpp": 4322,
+		"address": "Libertad 430",
+		"total": 150000,
+		"cart": {
+			"products": []
+		}
+	},
+	{
+		"id": 123,
+		"province": "Santiago del Estero",
+		"city": "Fernandez",
+		"cpp": 4322,
+		"address": "Libertad 430",
+		"total": 7490,
+		"cart": {
+			"products": []
+		}
+	},
+	{
+		"id": 124,
+		"province": "Santiago del Estero",
+		"city": "Fernandez",
+		"cpp": 4322,
+		"address": "Libertad 430",
+		"total": 1200,
+		"cart": {
+			"products": []
+		}
+	},
+	{
+		"id": 125,
+		"province": "Santiago del Estero",
+		"city": "Fernandez",
+		"cpp": 4322,
+		"address": "Libertad 430",
+		"total": 12000,
+		"cart": {
+			"products": []
+		}
+	}
+]

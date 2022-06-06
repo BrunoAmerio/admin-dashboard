@@ -1,13 +1,29 @@
 @import '../styles/config/mixins.scss';
 
 .container {
-	p {
-		@include buttonDefault(black, white);
-	}
+	// Este position es para el modal (Ya que su position es absolute)
+	position: relative;
 
 	main {
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
+
+		p {
+			@include buttonDefault(#2cceff, black);
+		}
+		.section {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+
+			.inputModal {
+				@include inputArea();
+				button {
+					@include buttonDefault(black, white);
+				}
+				gap: 15px;
+			}
+		}
 	}
 }

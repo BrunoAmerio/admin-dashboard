@@ -2,7 +2,7 @@ import { useState } from 'react';
 import style from './InputImage.module.scss';
 import ImageCarrousel from './ImageCarrousel/ImageCarrousel';
 
-// Este componente recibe toma todas las imagenes seleccionadas, y nos muestra una previsualizacion
+// Este componente recibe todas las imagenes seleccionadas, y nos muestra una previsualizacion
 // Ademas recive por parametro un estado para setear las imagenes que seleccionó el usuario
 // Luego hace uso del componente carrousel para mostrar las imagenes
 const InputImage = ({ setState }) => {

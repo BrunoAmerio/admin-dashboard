@@ -26,7 +26,7 @@ const Element = ({ data, redirectTo, colums }) => {
 	// Styles In Line
 	const stylesInLine = {
 		display: 'grid',
-		gridTemplateColumns: `repeat(${colums.length}, 1fr)`,
+		gridTemplateColumns: `1fr repeat(${colums.length - 1}, 100px)`,
 	};
 
 	return (
