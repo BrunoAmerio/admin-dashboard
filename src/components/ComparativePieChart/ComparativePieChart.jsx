@@ -11,7 +11,12 @@ const COLORS = [
 ];
 
 // Componente principal
-const ComparativePieChart = ({ data, dataKey }) => {
+/*
+	La propiedad data recibe el arreglo completo de la información que queremos parsear, tener en cuenta que este compoenente trabaja con toda la informacion junta
+	La propiedad dataKey recibe el nombre de la propiedad que queremos mostrar
+	La propiedad Title recibe el titulo que encabezará el chart
+ */
+const ComparativePieChart = ({ data, dataKey, title }) => {
 	const prepData = [];
 	data.forEach(item => {
 		prepData.push({
@@ -22,7 +27,7 @@ const ComparativePieChart = ({ data, dataKey }) => {
 
 	return (
 		<div className={style.container}>
-			<h2 className={style.title}>{dataKey}</h2>
+			<h2 className={style.title}>{title}</h2>
 			<ResponsiveContainer>
 				<PieChart>
 					<Pie

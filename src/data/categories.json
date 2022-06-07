@@ -5,7 +5,7 @@
 		"discount": 0.0,
 		"disable": false,
 		"views": {
-			"this_week": 350,
+			"this_week": 3500,
 			"last_week": 500,
 			"this_month": {
 				"name": "Abril",
@@ -35,6 +35,36 @@
 			]
 		},
 		"sales": {
+			"this_week": 10560,
+			"last_week": 745,
+			"this_month": {
+				"name": "Abril",
+				"year": 2022,
+				"weeks": [236, 256, 246, 235],
+				"total": 12330
+			},
+			"historic_month": [
+				{
+					"name": "Enero",
+					"year": 2022,
+					"weeks": [124, 356, 723, 347],
+					"total": 456678
+				},
+				{
+					"name": "Febrero",
+					"year": 2022,
+					"weeks": [367, 238, 3573, 363],
+					"total": 54674
+				},
+				{
+					"name": "Marzo",
+					"year": 2022,
+					"weeks": [246, 226, 486, 226],
+					"total": 45664
+				}
+			]
+		},
+		"money_collection": {
 			"this_week": 156,
 			"last_week": 745,
 			"this_month": {
@@ -129,6 +159,36 @@
 					"total": 35675
 				}
 			]
+		},
+		"money_collection": {
+			"this_week": 6222,
+			"last_week": 2462,
+			"this_month": {
+				"name": "Abril",
+				"year": 2022,
+				"weeks": [2462, 2462, 366, 3567],
+				"total": 89724
+			},
+			"historic_month": [
+				{
+					"name": "Enero",
+					"year": 2022,
+					"weeks": [1324, 2546, 4737, 1357],
+					"total": 98398
+				},
+				{
+					"name": "Febrero",
+					"year": 2022,
+					"weeks": [4864, 6568, 3643, 3456],
+					"total": 78487
+				},
+				{
+					"name": "Marzo",
+					"year": 2022,
+					"weeks": [4687, 4576, 4498, 40756],
+					"total": 54677
+				}
+			]
 		}
 	},
 	{
@@ -193,6 +253,36 @@
 					"year": 2022,
 					"weeks": [1247, 3573, 2345, 2466],
 					"total": 45786
+				}
+			]
+		},
+		"money_collection": {
+			"this_week": 13465,
+			"last_week": 24642,
+			"this_month": {
+				"name": "Abril",
+				"year": 2022,
+				"weeks": [24624, 2462, 2462, 24624],
+				"total": 5678
+			},
+			"historic_month": [
+				{
+					"name": "Enero",
+					"year": 2022,
+					"weeks": [1341, 1314, 13341, 3456],
+					"total": 23456
+				},
+				{
+					"name": "Febrero",
+					"year": 2022,
+					"weeks": [5748, 9586, 5789, 5798],
+					"total": 3563
+				},
+				{
+					"name": "Marzo",
+					"year": 2022,
+					"weeks": [6253, 9272, 9292, 3457],
+					"total": 37443
 				}
 			]
 		}
@@ -261,6 +351,36 @@
 					"total": 35673
 				}
 			]
+		},
+		"money_collection": {
+			"this_week": 2462,
+			"last_week": 0,
+			"this_month": {
+				"name": "Abril",
+				"year": 2022,
+				"weeks": [1351, 357, 2345, 6890],
+				"total": 9328
+			},
+			"historic_month": [
+				{
+					"name": "Enero",
+					"year": 2022,
+					"weeks": [1416, 4673, 3568, 2556],
+					"total": 23454
+				},
+				{
+					"name": "Febrero",
+					"year": 2022,
+					"weeks": [2132, 252, 23621, 5721],
+					"total": 34675
+				},
+				{
+					"name": "Marzo",
+					"year": 2022,
+					"weeks": [2552, 6257, 2533, 245252],
+					"total": 245734
+				}
+			]
 		}
 	},
 	{
@@ -327,6 +447,36 @@
 					"total": 34565
 				}
 			]
+		},
+		"money_collection": {
+			"this_week": 2344,
+			"last_week": 3424,
+			"this_month": {
+				"name": "Abril",
+				"year": 2022,
+				"weeks": [2445, 4245, 4367, 6678],
+				"total": 83832
+			},
+			"historic_month": [
+				{
+					"name": "Enero",
+					"year": 2022,
+					"weeks": [3456, 2465, 5788, 9658],
+					"total": 45673
+				},
+				{
+					"name": "Febrero",
+					"year": 2022,
+					"weeks": [6535, 6985, 6389, 8965],
+					"total": 76321
+				},
+				{
+					"name": "Marzo",
+					"year": 2022,
+					"weeks": [3644, 3634, 3563, 3563],
+					"total": 3562
+				}
+			]
 		}
 	},
 	{
@@ -365,7 +515,7 @@
 			]
 		},
 		"sales": {
-			"this_week": 324,
+			"this_week": 30240,
 			"last_week": 5346,
 			"this_month": {
 				"name": "Abril",
@@ -391,6 +541,36 @@
 					"year": 2022,
 					"weeks": [4557, 2334, 3556, 2466],
 					"total": 23450
+				}
+			]
+		},
+		"money_collection": {
+			"this_week": 87565,
+			"last_week": 357346,
+			"this_month": {
+				"name": "Abril",
+				"year": 2022,
+				"weeks": [2445, 4245, 4367, 6678],
+				"total": 89383
+			},
+			"historic_month": [
+				{
+					"name": "Enero",
+					"year": 2022,
+					"weeks": [2452, 2452, 4564, 4677],
+					"total": 467867
+				},
+				{
+					"name": "Febrero",
+					"year": 2022,
+					"weeks": [467, 3573, 3573, 3567],
+					"total": 73278
+				},
+				{
+					"name": "Marzo",
+					"year": 2022,
+					"weeks": [2314, 2676, 3546, 3343],
+					"total": 87378
 				}
 			]
 		}

@@ -1,7 +1,20 @@
 import style from './LinealChart.module.scss';
-import { LineChart, Line, Tooltip, CartesianGrid, XAxis } from 'recharts';
+import {
+	AreaChart,
+	Area,
+	Tooltip,
+	CartesianGrid,
+	XAxis,
+	ResponsiveContainer,
+} from 'recharts';
 
-const LinealChart = ({ data, label }) => {
+/*
+	La propiedad data recibe el arreglo de los valores
+	La propiedad label recibe la palabra con la que distinguiremos cada seccion del chart
+	La propiedad title encabezará el chart
+*/
+
+const LinealChart = ({ data, label, title }) => {
 	const prepData = [];
 	data.forEach((item, index) => {
 		prepData.push({
@@ -12,28 +25,15 @@ const LinealChart = ({ data, label }) => {
 
 	return (
 		<div className={style.container}>
-			<LineChart
-				width={600}
-				height={200}
-				data={prepData}
-				margin={{
-					top: 5,
-					right: 30,
-					left: 20,
-					bottom: 5,
-				}}
-			>
-				<CartesianGrid strokeDasharray='3 3' />
-				<XAxis dataKey='name' />
-				<Tooltip />
-				<Line
-					type='monotone'
-					dataKey='value'
-					stroke='#888efc'
-					activeDot={{ r: 8 }}
-				/>
-				<Line type='monotone' dataKey='uv' stroke='#82ca9d' />
-			</LineChart>
+			<h2>{title}</h2>
+			<ResponsiveContainer width={690} height={200}>
+				<AreaChart data={prepData}>
+					<CartesianGrid strokeDasharray='5 3' />
+					<Tooltip />
+					<XAxis dataKey='name' />
+					<Area type='monotone' dataKey='value' stroke='#888efc' />
+				</AreaChart>
+			</ResponsiveContainer>
 		</div>
 	);
 };
