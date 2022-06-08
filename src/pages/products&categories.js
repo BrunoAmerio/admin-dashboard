@@ -19,7 +19,7 @@ const ProductsCategories = () => {
 
 	return (
 		<div className={style.container}>
-			<h1 className='title'>Test</h1>
+			<h1 className='title'>Productos</h1>
 			<HeadDefault
 				title='Products & Categories'
 				description='View your products and categories in this page'

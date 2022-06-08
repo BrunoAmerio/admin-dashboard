@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react';
-
 // Components
+import ListOrdersContainer from '../components/ListOrdersContainer/ListOrdersContainer';
 import ComparativeBarChart from '../components/ComparativeBarChart/ComparativeBarChart';
 import ComparativePieChart from '../components/ComparativePieChart/ComparativePieChart';
+import LinealChart from '../components/LinealChart/LinealChart';
 import Head from 'next/head';
 
 // DATA
 import ecommerceData from '../data/ecommerce.json';
 import categoriesData from '../data/categories.json';
+import ordersData from '../data/orders.json';
 
 // Icons
 import style from '../styles/Chart.module.scss';
@@ -16,55 +17,9 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 
 const Charts = () => {
-	const [salesCategoriesThisMonth, setSalesCategoriesThisMonth] = useState([]);
-	const [salesCategoriesHistoric, setSalesCategoriesHistoric] = useState([]);
-	const [viewsCategoriesThisMonth, setViewsCategoriesThisMonth] = useState([]);
-	const [viewsCategoriesHistoric, setViewsCategoriesHistoric] = useState([]);
-
-	console.log(salesCategoriesHistoric, viewsCategoriesHistoric);
-
-	useEffect(() => {
-		const tempSalesCategoriesThisMonth = [];
-		const tempViewsCategoriesThisMont = [];
-		const tempSalesCategoriesHistoric = [];
-		const tempViewsCategoriesHistoric = [];
-		categoriesData.forEach(category => {
-			tempSalesCategoriesThisMonth.push({
-				name: category.name,
-				total: category.sales.this_month.total,
-			});
-
-			tempViewsCategoriesThisMont.push({
-				name: category.name,
-				total: category.views.this_month.total,
-			});
-
-			// Accedemos a los datos historicos
-			category.sales.historic_month.forEach(month => {
-				tempSalesCategoriesHistoric.push({
-					name: month.name,
-					total: month.total,
-				});
-			});
-
-			category.views.historic_month.forEach(month => {
-				tempViewsCategoriesHistoric.push({
-					name: month.name,
-					total: month.total,
-				});
-			});
-		});
-
-		// Este mes
-		setSalesCategoriesThisMonth(tempSalesCategoriesThisMonth);
-		setViewsCategoriesThisMonth(tempViewsCategoriesThisMont);
-		// Historicos
-		setSalesCategoriesHistoric(tempSalesCategoriesHistoric);
-		setViewsCategoriesHistoric(tempViewsCategoriesHistoric);
-	}, []);
-
 	return (
 		<div className={style.container}>
+			<h1 className='title'>Panel</h1>
 			<Head>
 				<title>Graficos - Admin Dashboard</title>
 				<meta name='description' content='Admin Dashboard Charts Page' />
@@ -100,7 +55,7 @@ const Charts = () => {
 			<div className={style.mainChartsContainer}>
 				<div className={style.slideChart}>
 					<ComparativeBarChart
-						label='Recaudación'
+						title='Recaudación'
 						XLegend={'Semana'}
 						data1={{
 							name: 'Este mes',
@@ -116,7 +71,7 @@ const Charts = () => {
 					/>
 
 					<ComparativeBarChart
-						label='Visitas'
+						title='Visitas'
 						XLegend={'Semana'}
 						data1={{
 							name: 'Este mes',
@@ -132,7 +87,7 @@ const Charts = () => {
 					/>
 
 					<ComparativeBarChart
-						label='Ventas'
+						title='Ventas'
 						XLegend={'Semana'}
 						data1={{
 							name: 'Este mes',
@@ -148,7 +103,59 @@ const Charts = () => {
 					/>
 				</div>
 
-				<ComparativePieChart dataKey='views' data={categoriesData} />
+				<ComparativePieChart
+					dataKey='views'
+					data={categoriesData}
+					title='Vistas esta semana'
+				/>
+			</div>
+
+			<div className={style.listContainer}>
+				<ListOrdersContainer data={ordersData} title='Ultimas Ordenes' />
+			</div>
+
+			<div className={style.section}>
+				<div className={style.item}>
+					<div className={style.slideChart}>
+						{categoriesData.map(category => {
+							return (
+								<LinealChart
+									key={category.id}
+									label='Semana'
+									title={`Ventas en el mes de: ${category.name}`}
+									data={category.sales.this_month.weeks}
+								/>
+							);
+						})}
+					</div>
+
+					<ComparativePieChart
+						dataKey={'sales'}
+						data={categoriesData}
+						title='Ventas'
+					/>
+				</div>
+
+				<div className={style.item}>
+					<div className={style.slideChart}>
+						{categoriesData.map(category => {
+							return (
+								<LinealChart
+									key={category.id}
+									label='Semana'
+									title={`Visitas en el mes de: ${category.name}`}
+									data={category.views.this_month.weeks}
+								/>
+							);
+						})}
+					</div>
+
+					<ComparativePieChart
+						dataKey={'money_collection'}
+						data={categoriesData}
+						title='Recaudacion'
+					/>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,0 +1,27 @@
+@import '../../../styles/config/mixins.scss';
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr repeat(3, 200px);
+	border-radius: 8px;
+	padding: 0px 5px;
+
+	.cancel {
+		@include status(#ff0000ab, #fab58d7a);
+	}
+	.complete {
+		@include status(#27c535ab, #92e47d7a);
+	}
+	.pending {
+		@include status(#eb671bab, #f1b7957a);
+	}
+
+	h2 {
+		font-size: 16px;
+	}
+
+	&:hover {
+		background-color: rgb(139, 205, 250);
+		cursor: pointer;
+	}
+}

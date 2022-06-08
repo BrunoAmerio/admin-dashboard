@@ -2,11 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	width: 210px;
-	height: 330px;
+	height: 350px;
 	align-items: center;
 	border-radius: 8px;
 	padding-top: 5px;
 	background-color: white;
+	position: relative;
 
 	.title {
 		font-size: 15px;
@@ -16,6 +17,8 @@
 	}
 
 	.label {
+		position: absolute;
+		bottom: 10px;
 		h2 {
 			display: flex;
 			font-size: 12px;

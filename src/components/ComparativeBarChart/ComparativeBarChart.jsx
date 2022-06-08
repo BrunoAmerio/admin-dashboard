@@ -13,7 +13,12 @@ import style from './ComparativeBarChart.module.scss';
 
 // Este componente toma dos arreglos y los compara
 // Estos arreglos deben contener objetos en los que dentro tengan la propiedad con el valor que queremos comparar
-const ComparativeChart = ({ data1, data2, label, XLegend }) => {
+/*
+	Las propiedades data1 recibe el primer arreglo, data2 el segundo
+	La propiedad title es lo que encabezará el chart
+	La propiedad XLegend recibe la palabra con la que identificaremos cada sección del chart
+*/
+const ComparativeChart = ({ data1, data2, title, XLegend }) => {
 	const data = [];
 	data1.value.forEach((value, index) => {
 		data.push({
@@ -23,12 +28,9 @@ const ComparativeChart = ({ data1, data2, label, XLegend }) => {
 		});
 	});
 
-	console.log(data1, data2);
-	console.log(data);
-
 	return (
 		<div className={style.container}>
-			<h2 className={style.title}>{label}</h2>
+			<h2 className={style.title}>{title}</h2>
 			<ResponsiveContainer width='100%' height='100%'>
 				<BarChart data={data}>
 					<CartesianGrid strokeDasharray='3 3' />

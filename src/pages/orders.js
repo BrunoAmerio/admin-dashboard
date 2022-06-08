@@ -1,11 +1,14 @@
-import style from '../styles/Transactions.module.scss';
+import ListOrdersContainer from '../components/ListOrdersContainer/ListOrdersContainer';
+import ordersData from '../data/orders.json';
+import style from '../styles/Orders.module.scss';
 
-const Transactions = () => {
+const Orders = () => {
 	return (
 		<div className={style.container}>
-			<h1>Esto es transactions</h1>
+			<h1 className='title'>Ordenes</h1>
+			<ListOrdersContainer data={ordersData} title='Ordenes' />
 		</div>
 	);
 };
 
-export default Transactions;
+export default Orders;

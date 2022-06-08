@@ -1,0 +1,12 @@
+.container {
+	height: 100vh;
+	.mainData {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.listContainer {
+		margin-top: 35px;
+	}
+}
