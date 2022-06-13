@@ -16,7 +16,7 @@ const ListElementContainer = ({
 	data,
 	label = {
 		title: 'Undefined',
-		subtitles: ['Undefined', 'Undefined', 'Undefined'],
+		subtitles: ['Undefined'],
 	},
 	redirectTo,
 }) => {

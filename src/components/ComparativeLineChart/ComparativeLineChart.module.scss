@@ -1,0 +1,15 @@
+@import '../../styles/config/colors.scss';
+
+.container {
+	text-align: center;
+	scroll-snap-align: center;
+
+	.label {
+		h1 {
+			height: 22px;
+		}
+		p {
+			color: $label;
+		}
+	}
+}

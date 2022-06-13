@@ -1,12 +1,15 @@
+@import '../../styles/config/colors.scss';
+
 .container {
 	width: 15%;
-
+	background-color: #9123ff;
 	.profile {
 		text-align: center;
 		padding: 10px;
 
 		h2 {
 			font-size: 18px;
+			color: white;
 			display: flex;
 			align-items: center;
 			gap: 20px;
@@ -14,21 +17,31 @@
 	}
 
 	.item {
+		height: 50px;
 		display: flex;
 		align-items: center;
 		gap: 15px;
 		padding: 15px 20px;
 		font-size: 10px;
 		font-family: 'Poppins-Regular';
+		color: white;
+		cursor: pointer;
 
 		&:hover {
-			background-color: rgb(223, 221, 221);
+			background-color: #7d00fabd;
 		}
 	}
-}
 
-.disable {
-	display: none;
+	.selected {
+		background-color: $background;
+		border-radius: 20px 0px 0px 20px;
+		transform: translateX(10px);
+		color: $black;
+
+		&:hover {
+			background-color: $background !important;
+		}
+	}
 }
 
 @media (min-width: 1500px) {

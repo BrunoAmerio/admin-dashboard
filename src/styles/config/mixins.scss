@@ -1,5 +1,7 @@
 @import './colors.scss';
 
+$boxShadow: 5px 5px 6px #00000040;
+
 @mixin buttonDefault($color, $secondColor) {
 	display: flex;
 	align-items: center;

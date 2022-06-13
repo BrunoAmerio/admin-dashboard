@@ -1,26 +1,26 @@
+@import '../../styles/config/colors.scss';
+@import '../../styles/config/mixins.scss';
+
 .container {
+	width: 100%;
 	background-color: white;
-	border-radius: 8px;
-	padding: 5px 15px;
-	margin-top: 50px;
+	border-radius: 2px;
+	box-shadow: $boxShadow;
 	.label {
-		display: flex;
-		flex-direction: column;
-
-		h1 {
-			margin: 0px;
-		}
-
+		padding: 0px 5px;
 		.subtitle {
 			display: grid;
-			grid-template-columns: 1fr repeat(3, 200px);
+			font-size: 14px;
+			grid-template-columns: repeat(4, 1fr);
+			text-align: center;
+			color: $label;
+			font-family: 'Poppins-Regular';
 		}
 	}
 
 	.pagination {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-		width: 100%;
+		width: fit-content;
+		margin: auto;
+		margin-top: 10px;
 	}
 }
