@@ -1,87 +1,68 @@
 @import '../styles/config/colors.scss';
+@import '../styles/config/mixins.scss';
 
 .container {
-	h1 {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-		color: $black;
-		margin-left: 42px;
-	}
-
 	.thisWeekContainer {
 		display: flex;
-		width: 100%;
-		margin: auto;
-		justify-content: space-evenly;
-
-		.color1 {
-			background: linear-gradient(to right, #fc7c13, #f8d84a);
-		}
-
-		.color2 {
-			background: linear-gradient(to right, #994bff, #78c9ff);
-		}
-
-		.color3 {
-			background: linear-gradient(to right, #0fa302, #86eb02d2);
-		}
+		background-color: white;
+		border-radius: 2px;
+		height: 150px;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: $boxShadow;
 
 		.item {
 			display: flex;
 			flex-direction: column;
-			text-align: center;
-			justify-content: space-around;
-			border-radius: 10px;
-			padding: 30px;
-			color: white;
+			align-items: center;
+			width: fit-content;
+			height: fit-content;
 
 			h2 {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 10px;
-				font-size: 18px;
-				margin: 0;
+				font-size: 15px;
 			}
 
-			h3 {
-				font-size: 25px;
-				margin: 0px;
+			.number {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				h2 {
+					font-size: 32px;
+					font-family: 'Poppins-Medium';
+				}
 			}
 		}
 	}
 
-	.mainChartsContainer {
-		display: flex;
-		margin-top: 25px;
-		align-items: center;
-	}
-	.slideChart {
-		display: flex;
-		width: 700px;
-		height: fit-content;
-		padding: 20px 0px;
-		gap: 650px;
-		overflow: scroll;
-		overflow-y: hidden;
-		scroll-snap-type: x mandatory;
-		background-color: white;
-		border-radius: 8px;
-	}
+	.body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 
-	.section {
-		display: flex;
-		flex-direction: column;
-		gap: 25px;
-		margin: auto;
-		margin-top: 55px;
-		width: 100%;
-
-		.item {
+		.section {
 			display: flex;
-			justify-content: space-evenly;
-			align-items: center;
+			flex-direction: column;
+			align-items: flex-end;
+			gap: 25px;
+			margin: auto;
+			margin-top: 21px;
+			width: 100%;
+
+			.slideContainer {
+				display: flex;
+				width: 548px;
+				gap: 650px;
+				overflow: scroll;
+				overflow-y: hidden;
+				scroll-snap-type: x mandatory;
+				background-color: white;
+				border-radius: 2px;
+				box-shadow: $boxShadow;
+			}
+
+			.listContainer {
+				width: 548px;
+			}
 		}
 	}
 }

@@ -7,6 +7,10 @@ body {
 	margin: 0;
 	height: 100%;
 	font-family: 'Poppins-Regular';
+	color: $black;
+	p {
+		font-family: 'Poppins-Medium';
+	}
 }
 
 a {
@@ -20,8 +24,9 @@ a {
 
 .container {
 	display: flex;
-
+	height: 100%;
 	.component {
+		min-height: 100vh;
 		background-color: $background;
 		width: 100%;
 		padding: 0px 40px;
@@ -30,8 +35,43 @@ a {
 			font-family: 'Poppins-italic';
 		}
 
-		.title {
-			margin-left: 50px;
+		.titleContainer {
+			display: flex;
+			align-items: center;
+			margin-top: 15px;
+			margin-bottom: 25px;
+			gap: 20px;
+			width: fit-content;
+			color: $black;
+
+			h1,
+			p {
+				height: 24px;
+			}
+
+			.icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: white;
+				border-radius: 5px;
+				box-shadow: 2px 3px 5px $label;
+				padding: 2px 8px;
+			}
+
+			.title {
+				display: flex;
+				height: fit-content;
+				flex-direction: column;
+				h1 {
+					font-size: 22px;
+				}
+				p {
+					margin: 0px;
+					font-family: 'Poppins-Medium';
+					color: $label;
+				}
+			}
 		}
 	}
 }

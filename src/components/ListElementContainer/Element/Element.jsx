@@ -52,7 +52,7 @@ const Element = ({ data, redirectTo, colums }) => {
 					</MenuItem>
 
 					<MenuItem>
-						<DoNotDisturbOnIcon fontSize='small' /> Desabilitar
+						<DoNotDisturbOnIcon fontSize='small' /> Deshabilitar
 					</MenuItem>
 				</Menu>
 			</div>

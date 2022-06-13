@@ -23,7 +23,7 @@ const ListOrdersContainer = ({ data, title }) => {
 	return (
 		<div className={style.container}>
 			<div className={style.label}>
-				<h2>{title}</h2>
+				<h1>{title}</h1>
 				<div className={style.subtitle}>
 					<h3>Provincia</h3>
 					<h3>Status</h3>
@@ -32,9 +32,11 @@ const ListOrdersContainer = ({ data, title }) => {
 				</div>
 			</div>
 
-			{page?.map(item => {
-				return <Element data={item} key={item.id} />;
-			})}
+			<div className={style.body}>
+				{page?.map(item => {
+					return <Element data={item} key={item.id} />;
+				})}
+			</div>
 
 			<div className={style.pagination}>
 				<Pagination
