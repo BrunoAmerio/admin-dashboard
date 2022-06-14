@@ -5,7 +5,7 @@ import HeadDefault from '../../components/Head/Head';
 import LineChart from '../../components/LinealChart/LinealChart';
 // Data
 import productsData from '../../data/products.json';
-import style from '../../styles/Product.module.scss';
+import style from '../../styles/ProductInfo.module.scss';
 
 /*
     Esta es la página donde se enlistan toda la informacion relevante acerca de los productos seleccionados
@@ -28,7 +28,9 @@ const ProductsDetail = () => {
 
 			<main className={style.main}>
 				<h1>{result.title}</h1>
+
 				{!result.images ? <div className={style.imageDefault} /> : null}
+
 				<div className={style.mainData}>
 					<h4>Precio: ${result.price}</h4>
 					<h4>Stock: {result.stock}</h4>

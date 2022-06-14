@@ -34,37 +34,6 @@
 			}
 		}
 	}
-
-	.body {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-
-		.section {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-			gap: 25px;
-			margin: auto;
-			margin-top: 21px;
-			width: 100%;
-
-			.slideContainer {
-				display: flex;
-				width: 548px;
-				gap: 650px;
-				overflow: scroll;
-				overflow-y: hidden;
-				scroll-snap-type: x mandatory;
-				background-color: white;
-				border-radius: 2px;
-				box-shadow: $boxShadow;
-			}
-
-			.listContainer {
-				width: 548px;
-			}
-		}
-	}
 }
 
 @media (min-width: 1800px) {

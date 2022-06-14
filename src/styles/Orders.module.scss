@@ -6,27 +6,6 @@
 	}
 
 	.listContainer {
-		margin-top: 35px;
-	}
-
-	.section {
-		display: flex;
 		width: 100%;
-		justify-content: space-evenly;
-		align-items: center;
-		margin-top: 50px;
-
-		.slideChart {
-			display: flex;
-			width: 700px;
-			height: fit-content;
-			padding: 20px 0px;
-			gap: 650px;
-			overflow: scroll;
-			overflow-y: hidden;
-			scroll-snap-type: x mandatory;
-			background-color: white;
-			border-radius: 8px;
-		}
 	}
 }

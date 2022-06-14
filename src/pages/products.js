@@ -1,23 +1,16 @@
-import { useState } from 'react';
-import productsData from '../data/products.json';
-import categoriesData from '../data/categories.json';
-
 // Components
 import HeadDefault from '../components/Head/Head';
 import ListElementContainer from '../components/ListElementContainer/ListElementContainer';
-import Link from 'next/link';
-import Modal from '../components/Modal/Modal';
+
+// Data
+import productsData from '../data/products.json';
+import categoriesData from '../data/categories.json';
 
 // Icons & Style
 import style from '../styles/Products&Categories.module.scss';
-import AddIcon from '@mui/icons-material/Add';
 import CategoryIcon from '@mui/icons-material/Category';
 
 const ProductsCategories = () => {
-	const [openMenu, setOpenMenu] = useState(false);
-	const [category, setCategory] = useState('');
-	console.log(category);
-
 	return (
 		<div className={style.container}>
 			<HeadDefault
@@ -40,43 +33,31 @@ const ProductsCategories = () => {
 
 			<main>
 				<div className={style.section}>
-					<Link href='/products/add'>
-						<p>
-							{' '}
-							<AddIcon /> Nuevo producto
-						</p>
-					</Link>
 					<ListElementContainer
 						data={productsData}
 						label={{
 							title: 'Productos',
 							subtitles: ['title', 'stock', 'price'],
 						}}
+						buttonProperties={{
+							title: 'Agregar producto',
+							link: '/products/add',
+						}}
 						redirectTo='products'
 					/>
 				</div>
 
 				<div className={style.section}>
-					<p onClick={() => setOpenMenu(!openMenu)}>
-						{' '}
-						<AddIcon />
-						Nueva Categoría
-					</p>
-
-					<Modal state={openMenu}>
-						<div className={style.inputModal}>
-							<input
-								type='text'
-								placeholder='Nombre de la categoria'
-								onChange={e => setCategory(e.target.value)}
-							/>
-							<button>Crear</button>
-						</div>
-					</Modal>
-
 					<ListElementContainer
 						data={categoriesData}
-						label={{ title: 'Categorias', subtitles: ['name'] }}
+						label={{
+							title: 'Categorias',
+							subtitles: ['name', 'products'],
+						}}
+						buttonProperties={{
+							title: 'Agregar categoría',
+							link: '/category/add',
+						}}
 						redirectTo='categories'
 					/>
 				</div>

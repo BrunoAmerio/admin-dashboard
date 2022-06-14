@@ -1,10 +1,10 @@
+@import '../../styles/config/mixins.scss';
+
 .container {
 	width: fit-content;
 	min-width: 800px;
-	height: fit-content;
 	margin-top: 15px;
 	padding: 10px 35px;
-	padding-bottom: 55px;
 	margin: auto;
 	position: relative;
 	background-color: white;
@@ -12,5 +12,36 @@
 
 	.label {
 		text-transform: capitalize;
+		.head {
+			position: relative;
+			button {
+				position: absolute;
+				background-color: transparent;
+				border: none;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				font-family: 'Poppins-Medium';
+				color: $black;
+				padding: 5px;
+				border-radius: 8px;
+				cursor: pointer;
+
+				&:hover {
+					border: 2px solid $black;
+					padding: 3px;
+					transition: 0.2s;
+				}
+			}
+		}
+		.subtitles {
+			color: $label;
+		}
+	}
+
+	.pagination {
+		display: flex;
+		justify-content: center;
+		margin-top: 25px;
 	}
 }

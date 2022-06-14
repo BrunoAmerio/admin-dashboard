@@ -26,13 +26,13 @@ const Element = ({ data, redirectTo, colums }) => {
 	// Styles In Line
 	const stylesInLine = {
 		display: 'grid',
-		gridTemplateColumns: `1fr repeat(${colums.length - 1}, 100px)`,
+		gridTemplateColumns: `1fr repeat(${colums.length - 1}, 140px)`,
 	};
 
 	return (
 		<div className={style.container}>
 			<Link href={`${redirectTo}/${data.id}`}>
-				<div style={stylesInLine} className={style.test}>
+				<div style={stylesInLine}>
 					{colums.map(name => {
 						return <h1 key={name}>{data[name]}</h1>;
 					})}

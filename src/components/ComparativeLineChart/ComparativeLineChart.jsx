@@ -15,7 +15,7 @@ const ComparativeLineChart = ({ data1, data2, label }) => {
 	data1.forEach((item, index) => {
 		readyData.push({
 			'Este mes': item,
-			'Mes pasado': data2[index],
+			'Mes pasado': data2 ? data2[index] : '',
 		});
 	});
 
@@ -38,13 +38,15 @@ const ComparativeLineChart = ({ data1, data2, label }) => {
 						stroke='#8884d8'
 						fill='#8884d8'
 					/>
-					<Area
-						type='monotone'
-						dataKey='Mes pasado'
-						stackId='1'
-						stroke='#ffc658'
-						fill='#ffc658'
-					/>
+					{data2 ? (
+						<Area
+							type='monotone'
+							dataKey='Mes pasado'
+							stackId='1'
+							stroke='#ffc658'
+							fill='#ffc658'
+						/>
+					) : null}
 				</AreaChart>
 			</ResponsiveContainer>
 		</div>
