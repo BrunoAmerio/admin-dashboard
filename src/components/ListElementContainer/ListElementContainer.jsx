@@ -3,6 +3,7 @@ import style from './ListElementContainer.module.scss';
 import Element from './Element/Element';
 import { Pagination } from '@mui/material';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 /*
 	Este componente se encarga de dibujar el listado completo de elementos que le pasemos como parametro a travez de "data"
@@ -14,10 +15,8 @@ import { useEffect, useState } from 'react';
 
 const ListElementContainer = ({
 	data,
-	label = {
-		title: 'Undefined',
-		subtitles: ['Undefined'],
-	},
+	label,
+	buttonProperties,
 	redirectTo,
 }) => {
 	const [page, setPage] = useState([]);
@@ -40,14 +39,20 @@ const ListElementContainer = ({
 	const stylesInLine = {
 		subtitle: {
 			display: 'grid',
-			gridTemplateColumns: `1fr repeat(${label.subtitles.length - 1}, 100px)`,
+			gridTemplateColumns: `1fr repeat(${label.subtitles.length - 1}, 150px)`,
+			justifyContent: 'center',
 		},
 	};
 
 	return (
 		<div className={style.container}>
 			<div className={style.label}>
-				<h1>{label?.title}</h1>
+				<div className={style.head}>
+					<h1>{label?.title}</h1>
+					<Link href={`${buttonProperties?.link || ''}`}>
+						<button>{buttonProperties?.title || ''}</button>
+					</Link>
+				</div>
 
 				<div className={style.subtitles} style={stylesInLine.subtitle}>
 					{label.subtitles?.map(subtitle => (

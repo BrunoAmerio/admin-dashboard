@@ -58,7 +58,7 @@ const Sidebar = () => {
 				<Link href='/products'>
 					<div className={styles.item} id='products'>
 						<CategoryIcon />
-						<h2>Productos</h2>
+						<h2>Productos . . .</h2>
 					</div>
 				</Link>
 

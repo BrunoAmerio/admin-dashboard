@@ -76,9 +76,9 @@ const Charts = () => {
 					</div>
 				</div>
 
-				<div className={style.body}>
-					<section className={style.section}>
-						<div className={style.slideContainer}>
+				<div className={'body'}>
+					<section className={'section'}>
+						<div className={'slideContainer'}>
 							<ComparativeLineChart
 								data1={ecommerceData.sales.this_month.weeks}
 								data2={
@@ -86,7 +86,7 @@ const Charts = () => {
 										ecommerceData.sales.historic_month.length - 1
 									].weeks
 								}
-								label={{ title: 'Recaudación', subtitle: 'Este mes' }}
+								label={{ title: 'Ventas', subtitle: 'Este mes' }}
 							/>
 
 							<ComparativeLineChart
@@ -110,7 +110,7 @@ const Charts = () => {
 							/>
 						</div>
 
-						<div className={style.listContainer}>
+						<div className={'listContainer'}>
 							<ListOrdersContainer
 								data={ordersData.slice(0, 5)}
 								title={'Ultimas ordenes'}
@@ -118,7 +118,7 @@ const Charts = () => {
 						</div>
 					</section>
 
-					<section className={style.section}>
+					<section className={'section'}>
 						<ComparativePieChart
 							data={categoriesData}
 							dataKey='sales'

@@ -1,9 +1,6 @@
 @import './config/colors.scss';
 
 .main {
-	position: absolute;
-	width: 86%;
-	right: 0;
 	text-align: center;
 	background-color: $background;
 
@@ -20,13 +17,14 @@
 		margin-bottom: 75px;
 		border-radius: 15px;
 		background: #e0e0e0;
-		box-shadow: 20px 20px 38px #777777, -20px -20px 60px #d8d8d8;
+		box-shadow: 16px 16px 28px #858484ad, -20px -20px 60px #807f7f27;
 	}
 
 	.mainData {
 		display: flex;
 		justify-content: space-evenly;
 		margin-bottom: 50px;
+		font-family: 'Poppins-Medium';
 	}
 
 	.chartsContainer {
