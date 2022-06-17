@@ -4,7 +4,7 @@
 		"name": "Electrodomesticos",
 		"discount": 0.0,
 		"disable": false,
-		"products": 3,
+		"products": 1,
 		"views": {
 			"this_week": 3500,
 			"last_week": 500,
@@ -101,7 +101,7 @@
 		"name": "Calzado",
 		"discount": 0.0,
 		"disable": false,
-		"products": 14,
+		"products": 2,
 		"views": {
 			"this_week": 6222,
 			"last_week": 2462,
@@ -198,7 +198,7 @@
 		"name": "Indumentaria",
 		"discount": 0.0,
 		"disable": false,
-		"products": 125,
+		"products": 2,
 
 		"views": {
 			"this_week": 13465,
@@ -296,7 +296,7 @@
 		"name": "Telefonía",
 		"discount": 0.0,
 		"disable": false,
-		"products": 10,
+		"products": 2,
 		"views": {
 			"this_week": 2462,
 			"last_week": 0,
@@ -393,7 +393,7 @@
 		"name": "Cocina",
 		"discount": 0.0,
 		"disable": false,
-		"products": 10,
+		"products": 1,
 		"views": {
 			"this_week": 2344,
 			"last_week": 3424,
@@ -490,7 +490,7 @@
 		"name": "Comestibles",
 		"discount": 0.0,
 		"disable": false,
-		"products": 130,
+		"products": 3,
 		"views": {
 			"this_week": 87565,
 			"last_week": 357346,

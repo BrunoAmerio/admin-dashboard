@@ -123,7 +123,7 @@ const ComparativePieChart = ({ data, dataKey, label }) => {
 					})}
 				</div>
 				<div className={style.pieContainer}>
-					<ResponsiveContainer height={200}>
+					<ResponsiveContainer height={200} width={300}>
 						<PieChart>
 							<Pie
 								activeIndex={activeIndex}

@@ -4,7 +4,6 @@ import {
 	Area,
 	Tooltip,
 	CartesianGrid,
-	XAxis,
 	ResponsiveContainer,
 } from 'recharts';
 
@@ -14,24 +13,30 @@ import {
 	La propiedad title encabezará el chart
 */
 
-const LinealChart = ({ data, label, title }) => {
+const LinealChart = ({ data, label }) => {
 	const prepData = [];
-	data.forEach((item, index) => {
+	data.forEach(item => {
 		prepData.push({
-			name: `${label} ${index + 1}`,
 			value: item,
 		});
 	});
 
 	return (
 		<div className={style.container}>
-			<h2>{title}</h2>
+			<div className={style.label}>
+				<h1>{label.title}</h1>
+				<p>{label.subtitle}</p>
+			</div>
 			<ResponsiveContainer width={690} height={200}>
 				<AreaChart data={prepData}>
 					<CartesianGrid strokeDasharray='5 3' />
 					<Tooltip />
-					<XAxis dataKey='name' />
-					<Area type='monotone' dataKey='value' stroke='#888efc' />
+					<Area
+						type='monotone'
+						dataKey='value'
+						stroke='#ffc658'
+						fill='#8884d8'
+					/>
 				</AreaChart>
 			</ResponsiveContainer>
 		</div>

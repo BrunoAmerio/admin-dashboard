@@ -8,6 +8,7 @@
 		"stock": 19,
 		"images": "",
 		"disable": false,
+		"category": "Electrodomesticos",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -108,6 +109,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Calzado",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -208,6 +210,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Calzado",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -308,6 +311,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Indumentaria",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -408,6 +412,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Indumentaria",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -508,6 +513,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Comestibles",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -608,6 +614,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Comestibles",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -708,6 +715,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Comestibles",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -808,6 +816,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Telefonía",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -908,6 +917,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Telefonía",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,
@@ -1008,6 +1018,7 @@
 		"stock": 0,
 		"images": "",
 		"disable": false,
+		"category": "Cocina",
 		"sales": {
 			"this_week": 0,
 			"last_week": 0,

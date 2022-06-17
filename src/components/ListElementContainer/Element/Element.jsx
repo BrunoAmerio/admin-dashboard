@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 import { MenuItem, Menu } from '@mui/material';
 import style from './Element.module.scss';
 
@@ -31,13 +30,14 @@ const Element = ({ data, redirectTo, colums }) => {
 
 	return (
 		<div className={style.container}>
-			<Link href={`${redirectTo}/${data.id}`}>
-				<div style={stylesInLine}>
-					{colums.map(name => {
-						return <h1 key={name}>{data[name]}</h1>;
-					})}
-				</div>
-			</Link>
+			<div
+				style={stylesInLine}
+				onClick={() => (window.location.href = `/${redirectTo}/${data.id}`)}
+			>
+				{colums.map(name => {
+					return <h1 key={name}>{data[name]}</h1>;
+				})}
+			</div>
 
 			<div className={style.floatButton}>
 				<MoreVertIcon fontSize='small' onClick={handleClick} />

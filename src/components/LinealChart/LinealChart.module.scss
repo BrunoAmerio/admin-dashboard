@@ -1,8 +1,18 @@
+@import '../../styles/config/colors.scss';
+
 .container {
 	text-align: center;
 	width: fit-content;
 	scroll-snap-align: center;
-	h2 {
-		font-size: 15px;
+
+	.label {
+		h1 {
+			height: 24px;
+			font-size: 22px;
+		}
+		p {
+			color: $label;
+			font-size: 14px;
+		}
 	}
 }

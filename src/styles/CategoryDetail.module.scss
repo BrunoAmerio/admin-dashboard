@@ -1,0 +1,10 @@
+.container {
+	.chartContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		width: fit-content;
+		margin: auto;
+		margin-top: 25px;
+	}
+}
